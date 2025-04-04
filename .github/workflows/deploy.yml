@@ -1,39 +1,43 @@
-name: Deploy to AWS via CodeDeploy
+name: Deploy to AWS EC2 via Docker (using Docker Hub)
 
 on:
   push:
     branches:
       - main
 
-env:
-  AWS_REGION: ap-northeast-2
-  S3_BUCKET: safebattery-s3
-  APPLICATION_NAME: SafeBattery-CodeDeploy-AI
-  DEPLOYMENT_GROUP: SafeBattery-CodeDeploy-AI-Group
-
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout source
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Zip and upload to S3
-        run: |
-          zip -r deployment-${{ github.sha }}.zip .
-          aws s3 cp deployment-${{ github.sha }}.zip s3://$S3_BUCKET/deployment-${{ github.sha }}.zip --region $AWS_REGION
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      # Docker Hub 로그인
+      - name: Log in to Docker Hub
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
-      - name: Deploy to EC2 via CodeDeploy
+      # Docker 이미지 빌드 및 태깅
+      - name: Build Docker image
         run: |
-          aws deploy create-deployment \
-            --application-name $APPLICATION_NAME \
-            --deployment-group-name $DEPLOYMENT_GROUP \
-            --s3-location bucket=$S3_BUCKET,key=deployment-${{ github.sha }}.zip,bundleType=zip \
-            --region $AWS_REGION
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          docker build -t my-app .
+          docker tag my-app:latest ${{ secrets.DOCKER_USERNAME }}/my-app:latest
+
+      # Docker 이미지 Docker Hub로 푸시
+      - name: Push Docker image to Docker Hub
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/my-app:latest
+
+      # EC2 인스턴스에 SSH 접속하여 컨테이너 업데이트 수행
+      - name: Deploy Docker container on EC2
+        uses: appleboy/ssh-action@v0.1.8
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            # Docker Hub에서 최신 이미지 풀
+            docker pull ${{ secrets.DOCKER_USERNAME }}/my-app:latest
+            # 기존 컨테이너 종료 및 삭제 (실행 중이 아니라면 무시)
+            docker stop my-app || true
+            docker rm my-app || true
+            # 새로운 컨테이너 실행 (필요에 따라 포트 매핑, 환경변수 등 추가)
+            docker run -d --name my-app -p 80:80 ${{ secrets.DOCKER_USERNAME }}/my-app:latest

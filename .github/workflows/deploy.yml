@@ -3,7 +3,7 @@ name: Deploy to AWS EC2 via Docker (using Docker Hub)
 on:
   push:
     branches:
-      - main
+      - deploy
 
 jobs:
   build-and-deploy:

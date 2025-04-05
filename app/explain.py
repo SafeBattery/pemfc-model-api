@@ -5,7 +5,7 @@ from Utils.losses import log_loss
 import numpy as np
 
 
-def explain_with_dynamic_mask(model, input_sequence, target_value, window_size=600, area=0.35, epochs=1):
+def explain_with_dynamic_mask(model, input_sequence, target_value, window_size=600, area=0.35, epochs=1000):
     device = torch.device("cpu")  # 명시적으로 CPU 사용
     model.to(device)
     model.train()  # 해석 시 train 모드 필요

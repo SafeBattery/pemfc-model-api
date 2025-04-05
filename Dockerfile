@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # 작업 디렉토리 설정
-WORKDIR ~/app
+WORKDIR /app
 COPY . .
 
 # pip 최신화 및 패키지 설치
@@ -27,5 +27,5 @@ RUN pip install --no-cache-dir flask==2.2.5 torch==1.13.1 numpy==1.21.6 \
     matplotlib==3.5.3 scikit-learn==1.0.2 requests==2.31.0 seaborn==0.11.2
 
 # Flask 앱 실행
-CMD ["python", "~/app/main.py"]
+CMD ["python", "app/main.py"]
 

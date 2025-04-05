@@ -47,4 +47,3 @@ jobs:
               -e FLASK_ENV=production \
               ${{ secrets.DOCKER_USERNAME }}/my-app:latest \
               flask --app app/main:app run --host=0.0.0.0 --port=80
-            docker run -d --name my-app -p 80:80 ${{ secrets.DOCKER_USERNAME }}/my-app:latest

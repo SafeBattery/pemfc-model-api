@@ -9,7 +9,7 @@ app = Flask(__name__)
 model = load_model("app/model_cpu.pth")
 
 @app.route("/predict", methods=["POST"])
-def predict():
+def predict(request):
     data = request.json
     input_sequence = np.array(data["input"])   # 2D 배열 (600 x 9)
     target_value = float(data["target"])       # 실제 PW 값 (예: 0.75)

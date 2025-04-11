@@ -1,3 +1,4 @@
+---
 name: Deploy to AWS EC2 via Docker (using Docker Hub)
 
 on:
@@ -34,11 +35,17 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            # Docker Hub에서 최신 이미지 풀
-            docker pull ${{ secrets.DOCKER_USERNAME }}/my-app:${{ github.sha }}
             # 기존 컨테이너 종료 및 삭제 (실행 중이 아니라면 무시)
             docker stop my-app || true
             docker rm my-app || true
+
+            # 기존 이미지 삭제
+            echo "Deleting all images in repository my-app..."
+            docker images --filter=reference="${{ secrets.DOCKER_USERNAME }}/my-app" -q | xargs -r docker rmi -f
+
+            # Docker Hub에서 최신 이미지 pull
+            docker pull ${{ secrets.DOCKER_USERNAME }}/my-app:${{ github.sha }}
+
             # 새로운 컨테이너 실행 (필요에 따라 포트 매핑, 환경변수 등 추가)
             docker run -d \
               --name my-app \

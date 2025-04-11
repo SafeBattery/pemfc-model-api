@@ -42,8 +42,8 @@ jobs:
             # 새로운 컨테이너 실행 (필요에 따라 포트 매핑, 환경변수 등 추가)
             docker run -d \
               --name my-app \
-              -p 80:80 \
+              -p 8000:8000 \
               -e FLASK_APP=app.py \
               -e FLASK_ENV=production \
               ${{ secrets.DOCKER_USERNAME }}/my-app:latest \
-              flask --app app/main:app run --host=0.0.0.0 --port=80
+              flask --app app/main:app run --host=0.0.0.0 --port=8000

@@ -46,7 +46,7 @@ RUN pip install --no-cache-dir /wheels/*
 # 소스 복사
 COPY . .
 
-EXPOSE 80
+EXPOSE 8000
 
 # Flask 실행
 CMD ["python", "app/main.py"]

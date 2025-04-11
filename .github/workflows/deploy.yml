@@ -20,11 +20,11 @@ jobs:
       - name: Build Docker image
         run: |
           docker build -t my-app .
-          docker tag my-app:latest ${{ secrets.DOCKER_USERNAME }}/my-app:latest
+          docker tag my-app:latest ${{ secrets.DOCKER_USERNAME }}/my-app:${{ github.sha }}
 
       # Docker 이미지 Docker Hub로 푸시
       - name: Push Docker image to Docker Hub
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/my-app:latest
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/my-app:${{ github.sha }}
 
       # EC2 인스턴스에 SSH 접속하여 컨테이너 업데이트 수행
       - name: Deploy Docker container on EC2
@@ -35,7 +35,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             # Docker Hub에서 최신 이미지 풀
-            docker pull ${{ secrets.DOCKER_USERNAME }}/my-app:latest
+            docker pull ${{ secrets.DOCKER_USERNAME }}/my-app:${{ github.sha }}
             # 기존 컨테이너 종료 및 삭제 (실행 중이 아니라면 무시)
             docker stop my-app || true
             docker rm my-app || true
@@ -43,7 +43,4 @@ jobs:
             docker run -d \
               --name my-app \
               -p 8000:8000 \
-              -e FLASK_APP=app.py \
-              -e FLASK_ENV=production \
-              ${{ secrets.DOCKER_USERNAME }}/my-app:latest \
-              flask --app app/main:app run --host=0.0.0.0 --port=8000
+              ${{ secrets.DOCKER_USERNAME }}/my-app:${{ github.sha }}

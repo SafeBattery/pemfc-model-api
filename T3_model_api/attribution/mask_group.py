@@ -6,8 +6,8 @@ import seaborn as sns
 import torch
 import torch.optim as optim
 
-from attribution.mask import Mask
-from attribution.perturbation import Perturbation
+from T3_model_api.attribution.mask import Mask
+from T3_model_api.attribution.perturbation import Perturbation
 
 
 class MaskGroup:

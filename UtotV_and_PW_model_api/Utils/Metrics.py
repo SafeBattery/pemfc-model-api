@@ -1,7 +1,7 @@
 import numpy as np
 import torch
 
-from Utils.Tensor_manipulation import extract_subtensor
+from UtotV_and_PW_model_api.Utils.Tensor_manipulation import extract_subtensor
 
 
 def get_information(

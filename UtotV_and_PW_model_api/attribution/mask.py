@@ -8,8 +8,8 @@ import torch
 import torch.optim as optim
 from torch.nn import Softmax
 
-from attribution.perturbation import Perturbation
-from Utils.Metrics import get_entropy, get_information
+from UtotV_and_PW_model_api.attribution.perturbation import Perturbation
+from UtotV_and_PW_model_api.Utils.Metrics import get_entropy, get_information
 
 
 class Mask:

@@ -1,6 +1,6 @@
 import torch
 import numpy as np
-from Model.Informer import Informer
+from UtotV_and_PW_model_api.Model.Informer import Informer
 
 # ✅ 디바이스 설정 (전역 디폴트)
 default_device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -22,6 +22,7 @@ def load_model(model_path="model.pth", device=None):
     # 모델 가중치 불러오기
     model.load_state_dict(torch.load(model_path, map_location=device))
     model.eval()
+    print("✅ UtotV & PW 모델 로드 성공")
     return model
 
 # ✅ 예측 함수

@@ -1,8 +1,8 @@
 import torch
 import numpy as np
-from attribution.mask import Mask
-from attribution.perturbation import FadeMovingAverageWindow
-from Utils.losses import mse
+from T3_model_api.attribution.mask import Mask
+from T3_model_api.attribution.perturbation import FadeMovingAverageWindow
+from T3_model_api.Utils.losses import mse
 
 # ✅ 디바이스 자동 설정
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

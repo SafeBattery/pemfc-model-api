@@ -1,21 +1,11 @@
-from flask import Flask, request, jsonify
-from main import load_model, predict
-from explain import explain
+from flask import request, jsonify
+from UtotV_and_PW_model_api.main import predict
+from UtotV_and_PW_model_api.explain import explain
 import torch
 import numpy as np
 
-# ✅ 디바이스 설정 (GPU 우선)
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-print("✅ 현재 디바이스:", device)
 
-# ✅ 모델 로드
-model = load_model(model_path="model.pth", device=device)
-
-# ✅ Flask 앱 생성
-app = Flask(__name__)
-
-@app.route("/predict_and_explain", methods=["POST"])
-def predict_and_explain():
+def predict_and_explain_UtotV_and_PW(model, device):
     try:
         data = request.get_json()
 
@@ -49,7 +39,3 @@ def predict_and_explain():
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)

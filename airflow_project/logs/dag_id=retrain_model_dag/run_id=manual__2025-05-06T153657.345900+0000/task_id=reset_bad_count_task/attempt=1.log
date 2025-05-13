@@ -1,0 +1,13 @@
+{"timestamp":"2025-05-06T15:37:04.810526","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-05-06T15:37:04.811052","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/retrain_model_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-05-06T15:37:04.825509","level":"warning","event":"/home/airflow/.local/lib/python3.12/site-packages/airflow/models/variable.py:204: DeprecationWarning: Using Variable.set from `airflow.models` is deprecated.Please use `from airflow.sdk import Variable` instead\n  warnings.warn(\n","logger":"py.warnings"}
+{"timestamp":"2025-05-06T15:37:04.866106Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-06T15:37:04.866485Z","level":"info","event":" Previous state of the Task instance: queued","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-06T15:37:04.866800Z","level":"info","event":"Current task name:reset_bad_count_task","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-06T15:37:04.867068Z","level":"info","event":"Dag name:retrain_model_dag","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-06T15:37:04.867313Z","level":"info","event":"🔄 retrain 후 bad_count 리셋","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-06T15:37:04.867559Z","level":"info","event":"Task instance in success state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-06T15:37:04.867862Z","level":"info","event":" Previous state of the Task instance: running","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-06T15:37:04.868132Z","level":"info","event":"Task operator:<Task(PythonOperator): reset_bad_count_task>","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-06T15:37:04.826745","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-05-06T15:37:04.827277","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}

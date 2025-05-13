@@ -1,0 +1,17 @@
+{"timestamp":"2025-05-06T15:34:36.637561","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-05-06T15:34:36.638243","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/retrain_model_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-05-06T15:34:36.674019Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-06T15:34:36.674563Z","level":"info","event":" Previous state of the Task instance: queued","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-06T15:34:36.674825Z","level":"info","event":"Current task name:retrain_model_task","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-06T15:34:36.675032Z","level":"info","event":"Dag name:retrain_model_dag","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-06T15:34:36.653376","level":"info","event":"Tmp dir root location: /tmp","logger":"airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook"}
+{"timestamp":"2025-05-06T15:34:36.654553","level":"info","event":"Running command: ['/usr/bin/bash', '-c', 'python /opt/airflow/scripts/train_model.py']","logger":"airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook"}
+{"timestamp":"2025-05-06T15:34:36.670180","level":"info","event":"Output:","logger":"airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook"}
+{"timestamp":"2025-05-06T15:34:43.230246","level":"info","event":"Final Test Loss: 0.2081","logger":"airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook"}
+{"timestamp":"2025-05-06T15:34:43.230387","level":"info","event":"Model saved at /opt/airflow/data/models/trained_model_20250506_153442.pth","logger":"airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook"}
+{"timestamp":"2025-05-06T15:34:43.230472","level":"info","event":"{'error': \"[Errno 2] No such file or directory: '/opt/airflow/data/models/trained_model_20250506_153442.pth'\"}","logger":"airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook"}
+{"timestamp":"2025-05-06T15:34:43.896124","level":"info","event":"Command exited with return code 0","logger":"airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook"}
+{"timestamp":"2025-05-06T15:34:43.896955","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('0196a63c-0d4f-74a0-8f54-b89e02a2eb0f'), task_id='retrain_model_task', dag_id='retrain_model_dag', run_id='manual__2025-05-06T15:34:35.569439+00:00', try_number=1, map_index=-1, hostname='fcbbbc33d31e', context_carrier={}, task=<Task(BashOperator): retrain_model_task>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=1, start_date=datetime.datetime(2025, 5, 6, 15, 34, 36, 51560, tzinfo=TzInfo(UTC)), end_date=None, is_mapped=False)","logger":"task"}
+{"timestamp":"2025-05-06T15:34:43.937340Z","level":"info","event":"Task instance in success state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-06T15:34:43.937667Z","level":"info","event":" Previous state of the Task instance: running","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-06T15:34:43.937984Z","level":"info","event":"Task operator:<Task(BashOperator): retrain_model_task>","chan":"stdout","logger":"task"}

@@ -1,0 +1,19 @@
+{"timestamp":"2025-05-06T15:00:05.107051","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-05-06T15:00:05.108357","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/monitor_performance_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-05-06T15:00:05.191001Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-06T15:00:05.191492Z","level":"info","event":" Previous state of the Task instance: queued","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-06T15:00:05.191803Z","level":"info","event":"Current task name:check_model_performance","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-06T15:00:05.192053Z","level":"info","event":"Dag name:monitor_performance_dag","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-06T15:00:05.192250Z","level":"info","event":"✅ 현재 모델 정확도: 0.6","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-06T15:00:05.138701","level":"warning","event":"/home/airflow/.local/lib/python3.12/site-packages/airflow/models/variable.py:147: DeprecationWarning: Using Variable.get from `airflow.models` is deprecated.Please use `from airflow.sdk import Variable` instead\n  warnings.warn(\n","logger":"py.warnings"}
+{"timestamp":"2025-05-06T15:00:05.140973","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-05-06T15:00:05.206146","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-05-06T15:00:05.218551Z","level":"info","event":"🚨 성능 저하 감지! bad_count = 6","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-06T15:00:05.218741","level":"warning","event":"/home/airflow/.local/lib/python3.12/site-packages/airflow/models/variable.py:204: DeprecationWarning: Using Variable.set from `airflow.models` is deprecated.Please use `from airflow.sdk import Variable` instead\n  warnings.warn(\n","logger":"py.warnings"}
+{"timestamp":"2025-05-06T15:00:05.219248","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-05-06T15:00:05.237069Z","level":"info","event":"🔥 1회 연속 성능 저하 ➔ retrain_model DAG 트리거 예정","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-06T15:00:05.237784Z","level":"info","event":"Task instance in success state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-06T15:00:05.238358Z","level":"info","event":" Previous state of the Task instance: running","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-06T15:00:05.238709Z","level":"info","event":"Task operator:<Task(PythonOperator): check_model_performance>","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-06T15:00:05.220925","level":"info","event":"Done. Returned value was: True","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}
+{"timestamp":"2025-05-06T15:00:05.221252","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('0196a61c-6898-7c3b-97ed-afbc6c54aa51'), task_id='check_model_performance', dag_id='monitor_performance_dag', run_id='scheduled__2025-05-06T15:00:00+00:00', try_number=1, map_index=-1, hostname='b34e0b4722c9', context_carrier={}, task=<Task(PythonOperator): check_model_performance>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=1, start_date=datetime.datetime(2025, 5, 6, 15, 0, 2, 630716, tzinfo=TzInfo(UTC)), end_date=None, is_mapped=False)","logger":"task"}

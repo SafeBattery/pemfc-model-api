@@ -1,0 +1,15 @@
+{"timestamp":"2025-05-07T12:54:44.891994","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-05-07T12:54:44.892515","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/retrain_model_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-05-07T12:54:44.924408Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-07T12:54:44.925070Z","level":"info","event":" Previous state of the Task instance: queued","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-07T12:54:44.925400Z","level":"info","event":"Current task name:retrain_model_task","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-07T12:54:44.925687Z","level":"info","event":"Dag name:retrain_model_dag","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-07T12:54:44.908857","level":"info","event":"Tmp dir root location: /tmp","logger":"airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook"}
+{"timestamp":"2025-05-07T12:54:44.909781","level":"info","event":"Running command: ['/usr/bin/bash', '-c', 'python /opt/airflow/scripts/train_model.py']","logger":"airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook"}
+{"timestamp":"2025-05-07T12:54:44.919185","level":"info","event":"Output:","logger":"airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook"}
+{"timestamp":"2025-05-07T12:55:38.732432","level":"info","event":"Command exited with return code -9","logger":"airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook"}
+{"timestamp":"2025-05-07T12:55:38.735416","level":"error","event":"Task failed with exception","logger":"task","error_detail":[{"exc_type":"AirflowException","exc_value":"Bash command failed. The command returned a non-zero exit code -9.","exc_notes":[],"syntax_error":null,"is_cause":false,"frames":[{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":825,"name":"run"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1088,"name":"_execute_task"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/bases/operator.py","lineno":408,"name":"wrapper"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/bash.py","lineno":233,"name":"execute"}]}]}
+{"timestamp":"2025-05-07T12:55:38.793546Z","level":"info","event":"Task instance in failure state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-07T12:55:38.793886Z","level":"info","event":"Task start","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-07T12:55:38.794155Z","level":"info","event":"Task:<Task(BashOperator): retrain_model_task>","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-07T12:55:38.794459Z","level":"info","event":"Failure caused by Bash command failed. The command returned a non-zero exit code -9.","chan":"stdout","logger":"task"}

@@ -1,0 +1,19 @@
+{"timestamp":"2025-05-08T04:10:30.382284","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-05-08T04:10:30.382745","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/trigger_monitor_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-05-08T04:10:30.450292Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-08T04:10:30.450932Z","level":"info","event":" Previous state of the Task instance: queued","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-08T04:10:30.451217Z","level":"info","event":"Current task name:monitor_T3","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-08T04:10:30.451422Z","level":"info","event":"Dag name:trigger_monitor_dag","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-08T04:10:30.410570","level":"info","event":"Tmp dir root location: /tmp","logger":"airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook"}
+{"timestamp":"2025-05-08T04:10:30.411524","level":"info","event":"Running command: ['/usr/bin/bash', '-c', 'python /opt/airflow/scripts/monitor_T3.py']","logger":"airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook"}
+{"timestamp":"2025-05-08T04:10:30.427997","level":"info","event":"Output:","logger":"airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook"}
+{"timestamp":"2025-05-08T04:10:30.467774","level":"info","event":"  File \"/opt/airflow/scripts/monitor_T3.py\", line 83","logger":"airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook"}
+{"timestamp":"2025-05-08T04:10:30.467970","level":"info","event":"    ``","logger":"airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook"}
+{"timestamp":"2025-05-08T04:10:30.468109","level":"info","event":"    ^","logger":"airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook"}
+{"timestamp":"2025-05-08T04:10:30.468232","level":"info","event":"SyntaxError: invalid syntax","logger":"airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook"}
+{"timestamp":"2025-05-08T04:10:30.471683","level":"info","event":"Command exited with return code 1","logger":"airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook"}
+{"timestamp":"2025-05-08T04:10:30.472425","level":"error","event":"Task failed with exception","logger":"task","error_detail":[{"exc_type":"AirflowException","exc_value":"Bash command failed. The command returned a non-zero exit code 1.","exc_notes":[],"syntax_error":null,"is_cause":false,"frames":[{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":825,"name":"run"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1088,"name":"_execute_task"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/sdk/bases/operator.py","lineno":408,"name":"wrapper"},{"filename":"/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/standard/operators/bash.py","lineno":233,"name":"execute"}]}]}
+{"timestamp":"2025-05-08T04:10:30.473877Z","level":"info","event":"Task instance in failure state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-08T04:10:30.474364Z","level":"info","event":"Task start","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-08T04:10:30.474728Z","level":"info","event":"Task:<Task(BashOperator): monitor_T3>","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-08T04:10:30.475028Z","level":"info","event":"Failure caused by Bash command failed. The command returned a non-zero exit code 1.","chan":"stdout","logger":"task"}

@@ -1,0 +1,109 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:13
+    container_name: postgres
+    environment:
+      - POSTGRES_USER=airflow
+      - POSTGRES_PASSWORD=airflow
+      - POSTGRES_DB=airflow
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_db:/var/lib/postgresql/data
+    networks:
+      - airflow
+
+  redis:
+    image: redis:7.2
+    networks:
+      - airflow
+
+  airflow-init:
+    image: apache/airflow:2.9.0
+    container_name: airflow-init
+    depends_on:
+      - postgres
+    networks:
+      - airflow
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+    entrypoint: >
+      bash -c "
+      airflow db migrate &&
+      airflow users create --username airflow --password airflow --firstname Jiuk --lastname Kim --role Admin --email airflow@example.com
+      "
+    restart: "no"
+
+  airflow-webserver:
+    image: apache/airflow:2.9.0
+    container_name: airflow-webserver
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+    networks:
+      - airflow
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+      - AIRFLOW__CORE__FERNET_KEY=vx0Qdc4YFcJYULAZESudNnzQIqnOAP5PvcWhIsuK18w=
+      - AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION=false
+      - AIRFLOW__CORE__LOAD_EXAMPLES=false
+    ports:
+      - 8080:8080
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./scripts:/opt/airflow/scripts
+      - ./models:/models
+      - ./Model:/models/Model
+      - ./data:/opt/airflow/data
+    command: webserver
+
+  airflow-scheduler:
+    image: apache/airflow:2.9.0
+    container_name: airflow-scheduler
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+    networks:
+      - airflow
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+      - AIRFLOW__CORE__FERNET_KEY=TTFzcmfVmDHy3zHZrN9Lu5qUMNf_aGVMTbveB4V3hHA=
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./scripts:/opt/airflow/scripts
+      - ./models:/models
+      - ./Model:/models/Model
+      - ./data:/opt/airflow/data
+    command: scheduler
+
+  flask-api:
+    container_name: flask-api
+    build:
+      context: ./flask
+      dockerfile: Dockerfile
+    networks:
+      - airflow
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./flask:/app
+      - ./models:/models
+      - ./Model:/models/Model
+
+volumes:
+  postgres_db:
+
+networks:
+  airflow:

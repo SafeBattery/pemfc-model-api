@@ -65,28 +65,38 @@ def predict():
 
         # ✅ 조건 충족 시 explain 실행 (custom 범위로 설정)
         trigger_explain = False
+        violated_index = None  # ✅ 범위 벗어난 인덱스 추적용
 
         if model_type == "PWU" and isinstance(pred, list) and len(pred) >= 2:
             # pred[0]: U_totV (0.628 ~ 0.941)
             # pred[1]: PW     (0.221 ~ 0.698)
-            if not (0.628 <= pred[0] <= 0.941) or not (0.221 <= pred[1] <= 0.698):
+            if not (0.628 <= pred[0] <= 0.941):
                 trigger_explain = True
+                violated_index = 0
+            elif not (0.221 <= pred[1] <= 0.698):
+                trigger_explain = True
+                violated_index = 1
 
         elif model_type == "T3" and isinstance(pred, (float, int, list)):
             pred_val = pred if isinstance(pred, (float, int)) else pred[0]
             if not (0.336 <= pred_val <= 0.983):
                 trigger_explain = True
+                violated_index = 0
 
-        # ✅ 해석 수행
         if trigger_explain:
             input_seq = torch.FloatTensor(np.array(data))  # [600, feature_dim]
             target_tensor = torch.FloatTensor(np.array(pred))
-            mask = explain(model, input_seq, target_tensor, target_index)
+            mask = explain(model, input_seq, target_tensor, violated_index)
             result["mask"] = mask.tolist()
+            result["explained_target_index"] = violated_index  # 추가 정보 반환
 
         return jsonify(result)
 
+
     except Exception as e:
+
+        print(f"[Flask ERROR] 예측 중 오류 발생: {str(e)}")  # 로그 출력 추가
+
         return jsonify({"error": str(e)}), 500
 
 

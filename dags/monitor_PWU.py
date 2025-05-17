@@ -19,6 +19,8 @@ def monitor_model(**kwargs):
     })
 
     if res.status_code != 200:
+        print("[ERROR] Flask 응답 상태:", res.status_code)
+        print("[ERROR] 응답 내용:", res.text)
         raise Exception("Flask prediction failed.")
 
     prediction = res.json()["prediction"]

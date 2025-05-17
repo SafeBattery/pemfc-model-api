@@ -1,0 +1,988 @@
+[2025-05-17T08:20:26.952+0000] {manager.py:470} INFO - Processing files using up to 2 processes at a time 
+[2025-05-17T08:20:26.953+0000] {manager.py:471} INFO - Process each file at most once every 30 seconds
+[2025-05-17T08:20:26.954+0000] {manager.py:472} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-05-17T08:20:26.955+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-05-17T08:20:27.004+0000] {manager.py:740} INFO - There are 4 files in /opt/airflow/dags
+[2025-05-17T08:20:27.146+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/monitor_PWU.py                               0           0
+/opt/airflow/dags/monitor_T3.py         167  0.05s             0           0
+/opt/airflow/dags/retrain_PWU_dag.py                           0           0
+/opt/airflow/dags/retrain_T3_dag.py     164  0.08s             0           0
+================================================================================
+[2025-05-17T08:20:57.908+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retrain_T3_dag.py     213  0.03s             1           0  0.34s           2025-05-17T08:20:27
+/opt/airflow/dags/monitor_T3.py         216  0.01s             1           0  0.32s           2025-05-17T08:20:27
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.22s           2025-05-17T08:20:27
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.21s           2025-05-17T08:20:27
+================================================================================
+[2025-05-17T08:21:28.706+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py         236  0.00s             1           0  0.27s           2025-05-17T08:20:58
+/opt/airflow/dags/retrain_T3_dag.py     233  0.02s             1           0  0.24s           2025-05-17T08:20:58
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.22s           2025-05-17T08:20:58
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.17s           2025-05-17T08:20:58
+================================================================================
+[2025-05-17T08:21:59.463+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.28s           2025-05-17T08:21:29
+/opt/airflow/dags/monitor_T3.py         256  0.00s             1           0  0.25s           2025-05-17T08:21:28
+/opt/airflow/dags/retrain_T3_dag.py     253  0.02s             1           0  0.23s           2025-05-17T08:21:28
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.16s           2025-05-17T08:21:29
+================================================================================
+[2025-05-17T08:22:30.222+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py         276  0.01s             1           0  0.24s           2025-05-17T08:21:59
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.21s           2025-05-17T08:21:59
+/opt/airflow/dags/retrain_T3_dag.py     273  0.04s             1           0  0.21s           2025-05-17T08:21:59
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.16s           2025-05-17T08:21:59
+================================================================================
+[2025-05-17T08:23:01.212+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py         298  0.01s             1           0  0.34s           2025-05-17T08:22:30
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.32s           2025-05-17T08:22:30
+/opt/airflow/dags/retrain_T3_dag.py     295  0.06s             1           0  0.30s           2025-05-17T08:22:30
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.29s           2025-05-17T08:22:30
+================================================================================
+[2025-05-17T08:23:31.885+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retrain_T3_dag.py     315  0.04s             1           0  0.17s           2025-05-17T08:23:01
+/opt/airflow/dags/monitor_T3.py         318  0.01s             1           0  0.14s           2025-05-17T08:23:01
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.11s           2025-05-17T08:23:01
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.09s           2025-05-17T08:23:01
+================================================================================
+[2025-05-17T08:24:02.427+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retrain_T3_dag.py     335  0.02s             1           0  0.14s           2025-05-17T08:23:31
+/opt/airflow/dags/monitor_T3.py         338  0.00s             1           0  0.13s           2025-05-17T08:23:32
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.11s           2025-05-17T08:23:32
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:23:32
+================================================================================
+[2025-05-17T08:24:32.963+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py         358  0.00s             1           0  0.12s           2025-05-17T08:24:02
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.11s           2025-05-17T08:24:02
+/opt/airflow/dags/retrain_T3_dag.py     355  0.01s             1           0  0.11s           2025-05-17T08:24:02
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:24:02
+================================================================================
+[2025-05-17T08:25:03.653+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py         378  0.00s             1           0  0.12s           2025-05-17T08:24:33
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.12s           2025-05-17T08:24:33
+/opt/airflow/dags/retrain_T3_dag.py     375  0.02s             1           0  0.11s           2025-05-17T08:24:33
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.11s           2025-05-17T08:24:33
+================================================================================
+[2025-05-17T08:25:27.141+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-05-17T08:25:27.192+0000] {manager.py:740} INFO - There are 4 files in /opt/airflow/dags
+[2025-05-17T08:25:34.341+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py         398  0.00s             1           0  0.11s           2025-05-17T08:25:03
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.11s           2025-05-17T08:25:03
+/opt/airflow/dags/retrain_T3_dag.py     395  0.02s             1           0  0.10s           2025-05-17T08:25:03
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.09s           2025-05-17T08:25:03
+================================================================================
+[2025-05-17T08:26:04.906+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.11s           2025-05-17T08:25:34
+/opt/airflow/dags/retrain_T3_dag.py     415  0.02s             1           0  0.11s           2025-05-17T08:25:34
+/opt/airflow/dags/monitor_T3.py         418  0.00s             1           0  0.11s           2025-05-17T08:25:34
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:25:34
+================================================================================
+[2025-05-17T08:26:35.814+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py         438  0.00s             1           0  0.31s           2025-05-17T08:26:05
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.29s           2025-05-17T08:26:05
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.21s           2025-05-17T08:26:05
+/opt/airflow/dags/retrain_T3_dag.py     435  0.02s             1           0  0.18s           2025-05-17T08:26:05
+================================================================================
+[2025-05-17T08:27:06.408+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py         458  0.00s             1           0  0.18s           2025-05-17T08:26:35
+/opt/airflow/dags/retrain_T3_dag.py     455  0.01s             1           0  0.16s           2025-05-17T08:26:35
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.16s           2025-05-17T08:26:36
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.13s           2025-05-17T08:26:36
+================================================================================
+[2025-05-17T08:27:36.964+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py         478  0.00s             1           0  0.11s           2025-05-17T08:27:06
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.11s           2025-05-17T08:27:06
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:27:06
+/opt/airflow/dags/retrain_T3_dag.py     475  0.02s             1           0  0.10s           2025-05-17T08:27:06
+================================================================================
+[2025-05-17T08:28:07.576+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py         498  0.00s             1           0  0.13s           2025-05-17T08:27:37
+/opt/airflow/dags/retrain_T3_dag.py     495  0.02s             1           0  0.12s           2025-05-17T08:27:37
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.12s           2025-05-17T08:27:37
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:27:37
+================================================================================
+[2025-05-17T08:28:38.181+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py         518  0.00s             1           0  0.14s           2025-05-17T08:28:07
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.12s           2025-05-17T08:28:07
+/opt/airflow/dags/retrain_T3_dag.py     515  0.01s             1           0  0.12s           2025-05-17T08:28:07
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.11s           2025-05-17T08:28:07
+================================================================================
+[2025-05-17T08:29:08.746+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py         538  0.00s             1           0  0.12s           2025-05-17T08:28:38
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.12s           2025-05-17T08:28:38
+/opt/airflow/dags/retrain_T3_dag.py     535  0.02s             1           0  0.10s           2025-05-17T08:28:38
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:28:38
+================================================================================
+[2025-05-17T08:29:39.269+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py         558  0.00s             1           0  0.12s           2025-05-17T08:29:08
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.11s           2025-05-17T08:29:08
+/opt/airflow/dags/retrain_T3_dag.py     555  0.02s             1           0  0.10s           2025-05-17T08:29:08
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:29:08
+================================================================================
+[2025-05-17T08:30:09.817+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.12s           2025-05-17T08:29:39
+/opt/airflow/dags/monitor_T3.py         578  0.00s             1           0  0.12s           2025-05-17T08:29:39
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:29:39
+/opt/airflow/dags/retrain_T3_dag.py     575  0.01s             1           0  0.10s           2025-05-17T08:29:39
+================================================================================
+[2025-05-17T08:30:27.245+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-05-17T08:30:27.299+0000] {manager.py:740} INFO - There are 4 files in /opt/airflow/dags
+[2025-05-17T08:30:40.492+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.13s           2025-05-17T08:30:10
+/opt/airflow/dags/monitor_T3.py         598  0.00s             1           0  0.12s           2025-05-17T08:30:09
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.11s           2025-05-17T08:30:10
+/opt/airflow/dags/retrain_T3_dag.py     595  0.02s             1           0  0.11s           2025-05-17T08:30:09
+================================================================================
+[2025-05-17T08:31:10.980+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.13s           2025-05-17T08:30:40
+/opt/airflow/dags/monitor_T3.py         618  0.00s             1           0  0.12s           2025-05-17T08:30:40
+/opt/airflow/dags/retrain_T3_dag.py     615  0.01s             1           0  0.11s           2025-05-17T08:30:40
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.11s           2025-05-17T08:30:40
+================================================================================
+[2025-05-17T08:31:41.587+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py         638  0.00s             1           0  0.11s           2025-05-17T08:31:11
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.11s           2025-05-17T08:31:11
+/opt/airflow/dags/retrain_T3_dag.py     635  0.01s             1           0  0.10s           2025-05-17T08:31:11
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:31:11
+================================================================================
+[2025-05-17T08:32:12.057+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py         658  0.00s             1           0  0.13s           2025-05-17T08:31:41
+/opt/airflow/dags/retrain_T3_dag.py     655  0.01s             1           0  0.12s           2025-05-17T08:31:41
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.11s           2025-05-17T08:31:41
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:31:41
+================================================================================
+[2025-05-17T08:32:42.654+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.14s           2025-05-17T08:32:12
+/opt/airflow/dags/monitor_T3.py         678  0.00s             1           0  0.12s           2025-05-17T08:32:12
+/opt/airflow/dags/retrain_T3_dag.py     675  0.01s             1           0  0.12s           2025-05-17T08:32:12
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.11s           2025-05-17T08:32:12
+================================================================================
+[2025-05-17T08:33:13.284+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py         698  0.00s             1           0  0.18s           2025-05-17T08:32:42
+/opt/airflow/dags/retrain_T3_dag.py     695  0.02s             1           0  0.16s           2025-05-17T08:32:42
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.11s           2025-05-17T08:32:42
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:32:42
+================================================================================
+[2025-05-17T08:33:43.868+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py         718  0.00s             1           0  0.14s           2025-05-17T08:33:13
+/opt/airflow/dags/retrain_T3_dag.py     715  0.02s             1           0  0.13s           2025-05-17T08:33:13
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.12s           2025-05-17T08:33:13
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.12s           2025-05-17T08:33:13
+================================================================================
+[2025-05-17T08:34:14.440+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py         738  0.00s             1           0  0.12s           2025-05-17T08:33:43
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.11s           2025-05-17T08:33:44
+/opt/airflow/dags/retrain_T3_dag.py     735  0.02s             1           0  0.11s           2025-05-17T08:33:43
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:33:44
+================================================================================
+[2025-05-17T08:34:45.127+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retrain_T3_dag.py     755  0.03s             1           0  0.13s           2025-05-17T08:34:14
+/opt/airflow/dags/monitor_T3.py         758  0.01s             1           0  0.13s           2025-05-17T08:34:14
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.11s           2025-05-17T08:34:14
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:34:14
+================================================================================
+[2025-05-17T08:35:15.716+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retrain_T3_dag.py     775  0.02s             1           0  0.13s           2025-05-17T08:34:45
+/opt/airflow/dags/monitor_T3.py         778  0.00s             1           0  0.13s           2025-05-17T08:34:45
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.12s           2025-05-17T08:34:45
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.11s           2025-05-17T08:34:45
+================================================================================
+[2025-05-17T08:35:28.101+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-05-17T08:35:28.247+0000] {manager.py:740} INFO - There are 4 files in /opt/airflow/dags
+[2025-05-17T08:35:46.563+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.15s           2025-05-17T08:35:16
+/opt/airflow/dags/monitor_T3.py         798  0.00s             1           0  0.13s           2025-05-17T08:35:15
+/opt/airflow/dags/retrain_T3_dag.py     795  0.02s             1           0  0.12s           2025-05-17T08:35:15
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.11s           2025-05-17T08:35:15
+================================================================================
+[2025-05-17T08:36:17.220+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py         818  0.00s             1           0  0.12s           2025-05-17T08:35:46
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.11s           2025-05-17T08:35:46
+/opt/airflow/dags/retrain_T3_dag.py     815  0.02s             1           0  0.11s           2025-05-17T08:35:46
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:35:46
+================================================================================
+[2025-05-17T08:36:47.828+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.12s           2025-05-17T08:36:17
+/opt/airflow/dags/monitor_T3.py         838  0.00s             1           0  0.12s           2025-05-17T08:36:17
+/opt/airflow/dags/retrain_T3_dag.py     835  0.03s             1           0  0.12s           2025-05-17T08:36:17
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.11s           2025-05-17T08:36:17
+================================================================================
+[2025-05-17T08:37:18.423+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retrain_T3_dag.py     855  0.02s             1           0  0.12s           2025-05-17T08:36:47
+/opt/airflow/dags/monitor_T3.py         858  0.00s             1           0  0.12s           2025-05-17T08:36:47
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.11s           2025-05-17T08:36:48
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.09s           2025-05-17T08:36:48
+================================================================================
+[2025-05-17T08:37:49.132+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py         878  0.01s             1           0  0.15s           2025-05-17T08:37:18
+/opt/airflow/dags/retrain_T3_dag.py     875  0.03s             1           0  0.14s           2025-05-17T08:37:18
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.11s           2025-05-17T08:37:18
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:37:18
+================================================================================
+[2025-05-17T08:38:19.732+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retrain_T3_dag.py     895  0.02s             1           0  0.13s           2025-05-17T08:37:49
+/opt/airflow/dags/monitor_T3.py         898  0.00s             1           0  0.13s           2025-05-17T08:37:49
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.12s           2025-05-17T08:37:49
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:37:49
+================================================================================
+[2025-05-17T08:38:50.335+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py         918  0.00s             1           0  0.12s           2025-05-17T08:38:19
+/opt/airflow/dags/retrain_T3_dag.py     915  0.02s             1           0  0.11s           2025-05-17T08:38:19
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.11s           2025-05-17T08:38:19
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:38:19
+================================================================================
+[2025-05-17T08:39:20.919+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py         938  0.00s             1           0  0.12s           2025-05-17T08:38:50
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.12s           2025-05-17T08:38:50
+/opt/airflow/dags/retrain_T3_dag.py     935  0.01s             1           0  0.11s           2025-05-17T08:38:50
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:38:50
+================================================================================
+[2025-05-17T08:39:51.465+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py         958  0.00s             1           0  0.11s           2025-05-17T08:39:21
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.11s           2025-05-17T08:39:21
+/opt/airflow/dags/retrain_T3_dag.py     955  0.01s             1           0  0.10s           2025-05-17T08:39:21
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:39:21
+================================================================================
+[2025-05-17T08:40:22.095+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py         978  0.00s             1           0  0.14s           2025-05-17T08:39:51
+/opt/airflow/dags/retrain_T3_dag.py     975  0.02s             1           0  0.12s           2025-05-17T08:39:51
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.12s           2025-05-17T08:39:51
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.11s           2025-05-17T08:39:51
+================================================================================
+[2025-05-17T08:40:28.387+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-05-17T08:40:28.436+0000] {manager.py:740} INFO - There are 4 files in /opt/airflow/dags
+[2025-05-17T08:40:52.833+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retrain_T3_dag.py     995  0.03s             1           0  0.12s           2025-05-17T08:40:22
+/opt/airflow/dags/monitor_T3.py         998  0.00s             1           0  0.12s           2025-05-17T08:40:22
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.11s           2025-05-17T08:40:22
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:40:22
+================================================================================
+[2025-05-17T08:41:23.315+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.14s           2025-05-17T08:40:53
+/opt/airflow/dags/retrain_T3_dag.py    1017  0.02s             1           0  0.13s           2025-05-17T08:40:52
+/opt/airflow/dags/monitor_T3.py        1020  0.00s             1           0  0.12s           2025-05-17T08:40:52
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:40:53
+================================================================================
+[2025-05-17T08:41:53.872+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py        1040  0.00s             1           0  0.13s           2025-05-17T08:41:23
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.11s           2025-05-17T08:41:23
+/opt/airflow/dags/retrain_T3_dag.py    1037  0.02s             1           0  0.11s           2025-05-17T08:41:23
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:41:23
+================================================================================
+[2025-05-17T08:42:24.414+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py        1060  0.00s             1           0  0.12s           2025-05-17T08:41:53
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.12s           2025-05-17T08:41:54
+/opt/airflow/dags/retrain_T3_dag.py    1057  0.02s             1           0  0.11s           2025-05-17T08:41:53
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:41:54
+================================================================================
+[2025-05-17T08:42:55.094+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py        1080  0.01s             1           0  0.12s           2025-05-17T08:42:24
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.12s           2025-05-17T08:42:24
+/opt/airflow/dags/retrain_T3_dag.py    1077  0.02s             1           0  0.11s           2025-05-17T08:42:24
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.11s           2025-05-17T08:42:24
+================================================================================
+[2025-05-17T08:43:25.638+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retrain_T3_dag.py    1097  0.02s             1           0  0.12s           2025-05-17T08:42:55
+/opt/airflow/dags/monitor_T3.py        1100  0.00s             1           0  0.12s           2025-05-17T08:42:55
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.11s           2025-05-17T08:42:55
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:42:55
+================================================================================
+[2025-05-17T08:43:56.139+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.13s           2025-05-17T08:43:25
+/opt/airflow/dags/monitor_T3.py        1120  0.00s             1           0  0.12s           2025-05-17T08:43:25
+/opt/airflow/dags/retrain_T3_dag.py    1117  0.02s             1           0  0.11s           2025-05-17T08:43:25
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.11s           2025-05-17T08:43:25
+================================================================================
+[2025-05-17T08:44:26.740+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py        1142  0.00s             1           0  0.15s           2025-05-17T08:43:56
+/opt/airflow/dags/retrain_T3_dag.py    1139  0.03s             1           0  0.13s           2025-05-17T08:43:56
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.12s           2025-05-17T08:43:56
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.11s           2025-05-17T08:43:56
+================================================================================
+[2025-05-17T08:44:57.297+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/retrain_T3_dag.py    1159  0.02s             1           0  0.12s           2025-05-17T08:44:26
+/opt/airflow/dags/monitor_T3.py        1162  0.00s             1           0  0.12s           2025-05-17T08:44:26
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.11s           2025-05-17T08:44:26
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:44:26
+================================================================================
+[2025-05-17T08:45:27.912+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.12s           2025-05-17T08:44:57
+/opt/airflow/dags/monitor_T3.py        1184  0.00s             1           0  0.12s           2025-05-17T08:44:57
+/opt/airflow/dags/retrain_T3_dag.py    1181  0.01s             1           0  0.11s           2025-05-17T08:44:57
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.11s           2025-05-17T08:44:57
+================================================================================
+[2025-05-17T08:45:29.132+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-05-17T08:45:29.230+0000] {manager.py:740} INFO - There are 4 files in /opt/airflow/dags
+[2025-05-17T08:45:58.653+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py        1204  0.00s             1           0  0.12s           2025-05-17T08:45:28
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.11s           2025-05-17T08:45:28
+/opt/airflow/dags/retrain_T3_dag.py    1201  0.02s             1           0  0.11s           2025-05-17T08:45:28
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:45:28
+================================================================================
+[2025-05-17T08:46:29.180+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.15s           2025-05-17T08:45:58
+/opt/airflow/dags/monitor_T3.py        1231  0.00s             1           0  0.14s           2025-05-17T08:45:58
+/opt/airflow/dags/retrain_T3_dag.py    1228  0.02s             1           0  0.13s           2025-05-17T08:45:58
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.11s           2025-05-17T08:45:58
+================================================================================
+[2025-05-17T08:46:59.832+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py        1271  0.01s             1           0  0.14s           2025-05-17T08:46:29
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.14s           2025-05-17T08:46:29
+/opt/airflow/dags/retrain_T3_dag.py    1268  0.02s             1           0  0.12s           2025-05-17T08:46:29
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.12s           2025-05-17T08:46:29
+================================================================================
+[2025-05-17T08:47:30.629+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py        1291  0.00s             1           0  0.30s           2025-05-17T08:47:00
+/opt/airflow/dags/retrain_T3_dag.py    1288  0.01s             1           0  0.24s           2025-05-17T08:47:00
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.22s           2025-05-17T08:47:00
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.21s           2025-05-17T08:47:00
+================================================================================
+[2025-05-17T08:48:01.450+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.24s           2025-05-17T08:47:31
+/opt/airflow/dags/monitor_T3.py        1311  0.01s             1           0  0.22s           2025-05-17T08:47:30
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.21s           2025-05-17T08:47:31
+/opt/airflow/dags/retrain_T3_dag.py    1308  0.03s             1           0  0.19s           2025-05-17T08:47:30
+================================================================================
+[2025-05-17T08:48:31.687+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py                                1           0  0.67s           2025-05-17T08:48:02
+/opt/airflow/dags/retrain_T3_dag.py                            1           0  0.59s           2025-05-17T08:48:02
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.32s           2025-05-17T08:48:02
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.31s           2025-05-17T08:48:02
+================================================================================
+[2025-05-17T08:49:02.383+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py                                1           0  0.18s           2025-05-17T08:48:32
+/opt/airflow/dags/retrain_T3_dag.py                            1           0  0.17s           2025-05-17T08:48:32
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.17s           2025-05-17T08:48:33
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.17s           2025-05-17T08:48:33
+================================================================================
+[2025-05-17T08:49:33.063+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.17s           2025-05-17T08:49:31
+/opt/airflow/dags/monitor_T3.py                                1           0  0.12s           2025-05-17T08:49:03
+/opt/airflow/dags/retrain_T3_dag.py                            1           0  0.11s           2025-05-17T08:49:03
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:49:03
+================================================================================
+[2025-05-17T08:49:39.984+0000] {manager.py:452} INFO - Exiting gracefully upon receiving signal 15
+[2025-05-17T08:50:38.856+0000] {manager.py:470} INFO - Processing files using up to 2 processes at a time 
+[2025-05-17T08:50:38.857+0000] {manager.py:471} INFO - Process each file at most once every 30 seconds
+[2025-05-17T08:50:38.858+0000] {manager.py:472} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-05-17T08:50:38.859+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-05-17T08:50:38.907+0000] {manager.py:740} INFO - There are 4 files in /opt/airflow/dags
+[2025-05-17T08:50:39.051+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/monitor_PWU.py        164  0.06s             0           0
+/opt/airflow/dags/monitor_T3.py                                0           0
+/opt/airflow/dags/retrain_PWU_dag.py                           0           0
+/opt/airflow/dags/retrain_T3_dag.py     167  0.05s             0           0
+================================================================================
+[2025-05-17T08:51:09.929+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py        184  0.02s             1           0  0.40s           2025-05-17T08:50:39
+/opt/airflow/dags/retrain_T3_dag.py     187  0.00s             1           0  0.36s           2025-05-17T08:50:39
+/opt/airflow/dags/monitor_T3.py                                1           0  0.23s           2025-05-17T08:50:39
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.20s           2025-05-17T08:50:39
+================================================================================
+[2025-05-17T08:51:40.563+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py        206  0.02s             1           0  0.14s           2025-05-17T08:51:10
+/opt/airflow/dags/monitor_T3.py                                1           0  0.12s           2025-05-17T08:51:10
+/opt/airflow/dags/retrain_T3_dag.py     209  0.00s             1           0  0.11s           2025-05-17T08:51:10
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:51:10
+================================================================================
+[2025-05-17T08:52:11.133+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py        226  0.02s             1           0  0.16s           2025-05-17T08:51:40
+/opt/airflow/dags/monitor_T3.py                                1           0  0.14s           2025-05-17T08:51:40
+/opt/airflow/dags/retrain_T3_dag.py     229  0.00s             1           0  0.13s           2025-05-17T08:51:40
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.11s           2025-05-17T08:51:40
+================================================================================
+[2025-05-17T08:52:41.687+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py        246  0.02s             1           0  0.12s           2025-05-17T08:52:11
+/opt/airflow/dags/monitor_T3.py                                1           0  0.11s           2025-05-17T08:52:11
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:52:11
+/opt/airflow/dags/retrain_T3_dag.py     249  0.00s             1           0  0.10s           2025-05-17T08:52:11
+================================================================================
+[2025-05-17T08:53:12.243+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py        266  0.01s             1           0  0.13s           2025-05-17T08:52:41
+/opt/airflow/dags/monitor_T3.py                                1           0  0.12s           2025-05-17T08:52:41
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.11s           2025-05-17T08:52:41
+/opt/airflow/dags/retrain_T3_dag.py     269  0.00s             1           0  0.10s           2025-05-17T08:52:41
+================================================================================
+[2025-05-17T08:53:42.840+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py                                1           0  0.15s           2025-05-17T08:53:12
+/opt/airflow/dags/monitor_PWU.py        286  0.02s             1           0  0.14s           2025-05-17T08:53:12
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.11s           2025-05-17T08:53:12
+/opt/airflow/dags/retrain_T3_dag.py     289  0.00s             1           0  0.11s           2025-05-17T08:53:12
+================================================================================
+[2025-05-17T08:54:13.373+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py        306  0.02s             1           0  0.14s           2025-05-17T08:53:42
+/opt/airflow/dags/monitor_T3.py                                1           0  0.12s           2025-05-17T08:53:43
+/opt/airflow/dags/retrain_T3_dag.py     309  0.00s             1           0  0.11s           2025-05-17T08:53:42
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.11s           2025-05-17T08:53:43
+================================================================================
+[2025-05-17T08:54:43.988+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py        326  0.02s             1           0  0.14s           2025-05-17T08:54:13
+/opt/airflow/dags/monitor_T3.py                                1           0  0.12s           2025-05-17T08:54:13
+/opt/airflow/dags/retrain_T3_dag.py     329  0.01s             1           0  0.11s           2025-05-17T08:54:13
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:54:13
+================================================================================
+[2025-05-17T08:55:14.525+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py        346  0.01s             1           0  0.14s           2025-05-17T08:54:44
+/opt/airflow/dags/monitor_T3.py                                1           0  0.12s           2025-05-17T08:54:44
+/opt/airflow/dags/retrain_T3_dag.py     349  0.00s             1           0  0.11s           2025-05-17T08:54:44
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:54:44
+================================================================================
+[2025-05-17T08:55:39.006+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-05-17T08:55:39.056+0000] {manager.py:740} INFO - There are 4 files in /opt/airflow/dags
+[2025-05-17T08:55:45.184+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py        366  0.01s             1           0  0.13s           2025-05-17T08:55:14
+/opt/airflow/dags/monitor_T3.py                                1           0  0.11s           2025-05-17T08:55:14
+/opt/airflow/dags/retrain_T3_dag.py     369  0.00s             1           0  0.10s           2025-05-17T08:55:14
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:55:14
+================================================================================
+[2025-05-17T08:56:15.688+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py        386  0.02s             1           0  0.13s           2025-05-17T08:55:45
+/opt/airflow/dags/monitor_T3.py                                1           0  0.11s           2025-05-17T08:55:45
+/opt/airflow/dags/retrain_T3_dag.py     389  0.00s             1           0  0.10s           2025-05-17T08:55:45
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:55:45
+================================================================================
+[2025-05-17T08:56:46.270+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py        406  0.02s             1           0  0.14s           2025-05-17T08:56:15
+/opt/airflow/dags/monitor_T3.py                                1           0  0.13s           2025-05-17T08:56:15
+/opt/airflow/dags/retrain_T3_dag.py     409  0.00s             1           0  0.11s           2025-05-17T08:56:15
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.11s           2025-05-17T08:56:15
+================================================================================
+[2025-05-17T08:57:16.826+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py                                1           0  0.14s           2025-05-17T08:56:46
+/opt/airflow/dags/monitor_PWU.py        426  0.02s             1           0  0.13s           2025-05-17T08:56:46
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.11s           2025-05-17T08:56:46
+/opt/airflow/dags/retrain_T3_dag.py     429  0.00s             1           0  0.10s           2025-05-17T08:56:46
+================================================================================
+[2025-05-17T08:57:47.466+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py        446  0.02s             1           0  0.13s           2025-05-17T08:57:16
+/opt/airflow/dags/monitor_T3.py                                1           0  0.12s           2025-05-17T08:57:17
+/opt/airflow/dags/retrain_T3_dag.py     449  0.00s             1           0  0.11s           2025-05-17T08:57:16
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:57:17
+================================================================================
+[2025-05-17T08:58:18.115+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py        466  0.04s             1           0  0.13s           2025-05-17T08:57:47
+/opt/airflow/dags/monitor_T3.py                                1           0  0.12s           2025-05-17T08:57:47
+/opt/airflow/dags/retrain_T3_dag.py     469  0.01s             1           0  0.10s           2025-05-17T08:57:47
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.09s           2025-05-17T08:57:47
+================================================================================
+[2025-05-17T08:58:48.733+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py        486  0.02s             1           0  0.17s           2025-05-17T08:58:18
+/opt/airflow/dags/retrain_T3_dag.py     489  0.00s             1           0  0.13s           2025-05-17T08:58:18
+/opt/airflow/dags/monitor_T3.py                                1           0  0.11s           2025-05-17T08:58:18
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.10s           2025-05-17T08:58:18
+================================================================================
+[2025-05-17T08:58:56.089+0000] {manager.py:452} INFO - Exiting gracefully upon receiving signal 15
+[2025-05-17T08:59:53.112+0000] {manager.py:470} INFO - Processing files using up to 2 processes at a time 
+[2025-05-17T08:59:53.113+0000] {manager.py:471} INFO - Process each file at most once every 30 seconds
+[2025-05-17T08:59:53.114+0000] {manager.py:472} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-05-17T08:59:53.115+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-05-17T08:59:53.168+0000] {manager.py:740} INFO - There are 4 files in /opt/airflow/dags
+[2025-05-17T08:59:53.292+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/monitor_PWU.py        164  0.06s             0           0
+/opt/airflow/dags/monitor_T3.py                                0           0
+/opt/airflow/dags/retrain_PWU_dag.py                           0           0
+/opt/airflow/dags/retrain_T3_dag.py     167  0.04s             0           0
+================================================================================
+[2025-05-17T09:00:23.410+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.34s           2025-05-17T08:59:53
+/opt/airflow/dags/retrain_T3_dag.py                            1           0  0.31s           2025-05-17T08:59:53
+/opt/airflow/dags/monitor_T3.py                                1           0  0.23s           2025-05-17T08:59:53
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.20s           2025-05-17T08:59:53
+================================================================================
+[2025-05-17T09:00:54.399+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py                                1           0  0.38s           2025-05-17T09:00:25
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.36s           2025-05-17T09:00:25
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.34s           2025-05-17T09:00:24
+/opt/airflow/dags/retrain_T3_dag.py                            1           0  0.34s           2025-05-17T09:00:24
+================================================================================
+[2025-05-17T09:01:24.432+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py                               1           0  2.71s           2025-05-17T09:00:58
+/opt/airflow/dags/retrain_T3_dag.py                            1           0  2.44s           2025-05-17T09:00:57
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.50s           2025-05-17T09:00:58
+/opt/airflow/dags/monitor_T3.py                                1           0  0.45s           2025-05-17T09:00:58
+================================================================================
+[2025-05-17T09:01:54.589+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.82s           2025-05-17T09:01:29
+/opt/airflow/dags/monitor_T3.py                                1           0  0.70s           2025-05-17T09:01:29
+/opt/airflow/dags/retrain_T3_dag.py                            1           0  0.67s           2025-05-17T09:01:29
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.42s           2025-05-17T09:01:29
+================================================================================
+[2025-05-17T09:02:25.496+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py                               1           0  2.21s           2025-05-17T09:02:01
+/opt/airflow/dags/retrain_T3_dag.py                            1           0  2.18s           2025-05-17T09:02:01
+/opt/airflow/dags/monitor_T3.py                                1           0  0.39s           2025-05-17T09:02:02
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.33s           2025-05-17T09:02:02
+================================================================================
+[2025-05-17T09:02:55.663+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py                               1           0  4.11s           2025-05-17T09:02:36
+/opt/airflow/dags/retrain_T3_dag.py                            1           0  4.03s           2025-05-17T09:02:36
+/opt/airflow/dags/monitor_T3.py                                1           0  0.52s           2025-05-17T09:02:37
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.34s           2025-05-17T09:02:37
+================================================================================
+[2025-05-17T09:03:34.596+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py                                1           0  0.36s           2025-05-17T09:03:08
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.30s           2025-05-17T09:03:07
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.27s           2025-05-17T09:03:07
+/opt/airflow/dags/retrain_T3_dag.py                            1           0  0.23s           2025-05-17T09:03:07
+================================================================================
+[2025-05-17T09:04:04.674+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.96s           2025-05-17T09:03:38
+/opt/airflow/dags/retrain_T3_dag.py                            1           0  0.68s           2025-05-17T09:03:38
+/opt/airflow/dags/monitor_T3.py                                1           0  0.64s           2025-05-17T09:03:39
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.42s           2025-05-17T09:03:39
+================================================================================
+[2025-05-17T09:04:35.381+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py                               1           0  1.24s           2025-05-17T09:04:10
+/opt/airflow/dags/retrain_T3_dag.py                            1           0  1.13s           2025-05-17T09:04:10
+/opt/airflow/dags/monitor_T3.py                                1           0  0.56s           2025-05-17T09:04:10
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.56s           2025-05-17T09:04:10
+================================================================================
+[2025-05-17T09:04:53.411+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2025-05-17T09:04:53.637+0000] {manager.py:740} INFO - There are 4 files in /opt/airflow/dags
+[2025-05-17T09:05:05.969+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_T3.py                                1           0  0.38s           2025-05-17T09:04:41
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.31s           2025-05-17T09:04:40
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.29s           2025-05-17T09:04:41
+/opt/airflow/dags/retrain_T3_dag.py                            1           0  0.28s           2025-05-17T09:04:40
+================================================================================
+[2025-05-17T09:05:36.119+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/monitor_PWU.py                               1           0  0.34s           2025-05-17T09:05:11
+/opt/airflow/dags/monitor_T3.py                                1           0  0.33s           2025-05-17T09:05:11
+/opt/airflow/dags/retrain_PWU_dag.py                           1           0  0.30s           2025-05-17T09:05:12
+/opt/airflow/dags/retrain_T3_dag.py                            1           0  0.27s           2025-05-17T09:05:11
+================================================================================

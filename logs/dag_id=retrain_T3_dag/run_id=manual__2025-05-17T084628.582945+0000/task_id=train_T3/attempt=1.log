@@ -1,0 +1,25 @@
+[2025-05-17T08:46:29.281+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-17T08:46:29.317+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: retrain_T3_dag.train_T3 manual__2025-05-17T08:46:28.582945+00:00 [queued]>
+[2025-05-17T08:46:29.327+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: retrain_T3_dag.train_T3 manual__2025-05-17T08:46:28.582945+00:00 [queued]>
+[2025-05-17T08:46:29.328+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2025-05-17T08:46:29.346+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): train_T3> on 2025-05-17 08:46:28.582945+00:00
+[2025-05-17T08:46:29.353+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'retrain_T3_dag', 'train_T3', 'manual__2025-05-17T08:46:28.582945+00:00', '--job-id', '296', '--raw', '--subdir', 'DAGS_FOLDER/retrain_T3_dag.py', '--cfg-path', '/tmp/tmp7w837131']
+[2025-05-17T08:46:29.355+0000] {standard_task_runner.py:91} INFO - Job 296: Subtask train_T3
+[2025-05-17T08:46:29.362+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=1227) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-05-17T08:46:29.364+0000] {standard_task_runner.py:63} INFO - Started process 1244 to run task
+[2025-05-17T08:46:29.414+0000] {task_command.py:426} INFO - Running <TaskInstance: retrain_T3_dag.train_T3 manual__2025-05-17T08:46:28.582945+00:00 [running]> on host a5e636d29f18
+[2025-05-17T08:46:29.507+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='retrain_T3_dag' AIRFLOW_CTX_TASK_ID='train_T3' AIRFLOW_CTX_EXECUTION_DATE='2025-05-17T08:46:28.582945+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-17T08:46:28.582945+00:00'
+[2025-05-17T08:46:29.508+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-17T08:46:29.521+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-05-17T08:46:29.522+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/scripts/train_T3.py']
+[2025-05-17T08:46:29.529+0000] {subprocess.py:86} INFO - Output:
+[2025-05-17T08:46:36.891+0000] {subprocess.py:93} INFO - /opt/***/scripts/train_T3.py:40: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /pytorch/torch/csrc/utils/tensor_new.cpp:254.)
+[2025-05-17T08:46:36.940+0000] {subprocess.py:93} INFO -   return torch.FloatTensor(X), torch.FloatTensor(Y)
+[2025-05-17T08:48:28.103+0000] {subprocess.py:93} INFO - [Epoch 1] Loss: 0.0461
+[2025-05-17T08:48:28.104+0000] {subprocess.py:93} INFO - [✅ Saved] Trained model → /models/T3/model.pth
+[2025-05-17T08:48:28.732+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-05-17T08:48:28.733+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-17T08:48:28.760+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=retrain_T3_dag, task_id=train_T3, execution_date=20250517T084628, start_date=20250517T084629, end_date=20250517T084828
+[2025-05-17T08:48:28.789+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-17T08:48:28.809+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-17T08:48:28.814+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

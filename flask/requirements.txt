@@ -1,0 +1,10 @@
+flask
+torch
+numpy
+matplotlib
+pandas
+optuna
+tqdm
+scikit-learn
+seaborn
+requests

@@ -54,6 +54,7 @@ services:
       - AIRFLOW__CORE__FERNET_KEY=vx0Qdc4YFcJYULAZESudNnzQIqnOAP5PvcWhIsuK18w=
       - AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION=false
       - AIRFLOW__CORE__LOAD_EXAMPLES=false
+      - NVIDIA_VISIBLE_DEVICES=all
     ports:
       - 8080:8080
     volumes:
@@ -65,6 +66,11 @@ services:
       - ./Model:/models/Model
       - ./data:/opt/airflow/data
     command: webserver
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [ gpu ]
 
   airflow-scheduler:
     image: apache/airflow:2.9.0
@@ -78,6 +84,7 @@ services:
       - AIRFLOW__CORE__EXECUTOR=LocalExecutor
       - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
       - AIRFLOW__CORE__FERNET_KEY=TTFzcmfVmDHy3zHZrN9Lu5qUMNf_aGVMTbveB4V3hHA=
+      - NVIDIA_VISIBLE_DEVICES=all
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
@@ -87,6 +94,11 @@ services:
       - ./Model:/models/Model
       - ./data:/opt/airflow/data
     command: scheduler
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [ gpu ]
 
   flask-api:
     container_name: flask-api
@@ -101,6 +113,9 @@ services:
       - ./flask:/app
       - ./models:/models
       - ./Model:/models/Model
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+
 
 volumes:
   postgres_db:

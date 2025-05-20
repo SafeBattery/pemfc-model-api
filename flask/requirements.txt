@@ -1,5 +1,4 @@
 flask
-torch
 numpy
 matplotlib
 pandas

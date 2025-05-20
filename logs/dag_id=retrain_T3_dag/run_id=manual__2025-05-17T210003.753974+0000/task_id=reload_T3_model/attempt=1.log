@@ -1,0 +1,19 @@
+[2025-05-17T21:03:11.553+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-17T21:03:11.612+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: retrain_T3_dag.reload_T3_model manual__2025-05-17T21:00:03.753974+00:00 [queued]>
+[2025-05-17T21:03:11.645+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: retrain_T3_dag.reload_T3_model manual__2025-05-17T21:00:03.753974+00:00 [queued]>
+[2025-05-17T21:03:11.647+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2025-05-17T21:03:11.688+0000] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): reload_T3_model> on 2025-05-17 21:00:03.753974+00:00
+[2025-05-17T21:03:11.699+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=29228) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-05-17T21:03:11.701+0000] {standard_task_runner.py:63} INFO - Started process 29235 to run task
+[2025-05-17T21:03:11.715+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'retrain_T3_dag', 'reload_T3_model', 'manual__2025-05-17T21:00:03.753974+00:00', '--job-id', '434', '--raw', '--subdir', 'DAGS_FOLDER/retrain_T3_dag.py', '--cfg-path', '/tmp/tmpzf9d99dm']
+[2025-05-17T21:03:11.721+0000] {standard_task_runner.py:91} INFO - Job 434: Subtask reload_T3_model
+[2025-05-17T21:03:11.827+0000] {task_command.py:426} INFO - Running <TaskInstance: retrain_T3_dag.reload_T3_model manual__2025-05-17T21:00:03.753974+00:00 [running]> on host b91ac73f2b68
+[2025-05-17T21:03:12.031+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='retrain_T3_dag' AIRFLOW_CTX_TASK_ID='reload_T3_model' AIRFLOW_CTX_EXECUTION_DATE='2025-05-17T21:00:03.753974+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-17T21:00:03.753974+00:00'
+[2025-05-17T21:03:12.032+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-17T21:03:12.119+0000] {logging_mixin.py:188} INFO - [retrain_T3] Reload response → {"message":"T3 model reloaded.","status":"success"}
+[2025-05-17T21:03:12.120+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-17T21:03:12.121+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-17T21:03:12.133+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=retrain_T3_dag, task_id=reload_T3_model, execution_date=20250517T210003, start_date=20250517T210311, end_date=20250517T210312
+[2025-05-17T21:03:12.238+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-17T21:03:12.278+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-17T21:03:12.333+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

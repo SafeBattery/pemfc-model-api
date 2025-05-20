@@ -13,3 +13,11 @@
 [2025-05-17T09:02:59.547+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
 [2025-05-17T09:02:59.590+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/scripts/train_PWU.py']
 [2025-05-17T09:02:59.638+0000] {subprocess.py:86} INFO - Output:
+[2025-05-17T09:16:14.898+0000] {subprocess.py:93} INFO - [Epoch 1] Loss: 0.0101
+[2025-05-17T09:16:14.908+0000] {subprocess.py:93} INFO - [✅ Saved] Trained model → /models/PWU/model.pth
+[2025-05-17T09:16:16.109+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-05-17T09:16:16.115+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-17T09:16:16.231+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=retrain_PWU_dag, task_id=train_PWU, execution_date=20250517T090255, start_date=20250517T090258, end_date=20250517T091616
+[2025-05-17T09:16:16.302+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-17T09:16:16.349+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-17T09:16:16.354+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

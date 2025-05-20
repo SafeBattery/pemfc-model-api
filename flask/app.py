@@ -6,6 +6,10 @@ models = {
     "PWU": None,
     "T3": None
 }
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print("✅ Using device:", device)
+
 @app.route("/", methods=["GET"])
 def index():
     return "✅ Flask API is running!", 200
@@ -32,7 +36,8 @@ def reload_model():
         else:
             return jsonify({"error": f"Unknown model type: {model_type}"}), 400
 
-        model.load_state_dict(torch.load(model_path, map_location='cpu'))
+        model.load_state_dict(torch.load(model_path, map_location=device))
+        model.to(device)
         model.eval()
         models[model_type] = model
         return jsonify({"status": "success", "message": f"{model_type} model reloaded."})
@@ -52,11 +57,11 @@ def predict():
             return jsonify({"error": f"{model_type} 모델이 로드되지 않았습니다."}), 500
 
         model = models[model_type]
-        input_tensor = torch.FloatTensor(data).unsqueeze(0)  # shape: [1, 600, feature_dim]
+        input_tensor = torch.FloatTensor(data).unsqueeze(0).to(device)  # shape: [1, 600, feature_dim]
 
         # ✅ 예측
         with torch.no_grad():
-            pred = model(input_tensor).squeeze().tolist()
+            pred = model(input_tensor).squeeze().cpu().tolist()
 
         result = {
             "prediction": pred,

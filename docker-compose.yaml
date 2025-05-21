@@ -65,7 +65,7 @@ services:
       - ./models:/models
       - ./Model:/models/Model
       - ./data:/opt/airflow/data
-      - ./scaler:/opt/airflow/data/scaler
+      - ./scaler:/opt/airflow/scaler
     command: webserver
     deploy:
       resources:
@@ -94,7 +94,7 @@ services:
       - ./models:/models
       - ./Model:/models/Model
       - ./data:/opt/airflow/data
-      - ./scaler:/opt/airflow/data/scaler
+      - ./scaler:/opt/airflow/scaler
     command: scheduler
     deploy:
       resources:

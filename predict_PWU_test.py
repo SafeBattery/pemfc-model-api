@@ -3,10 +3,10 @@ import numpy as np
 import json
 
 # ✅ 테스트용 T3 입력 생성: shape (600, 4)
-X_test = np.tile(np.linspace(0.2, 0.8, 4), (600, 1)).tolist()
+X_test = np.tile(np.linspace(0.2, 0.8, 9), (600, 1)).tolist()
 
 payload = {
-    "type": "T3",
+    "type": "PWU",
     "threshold": 0.05,
     "input": X_test
 }

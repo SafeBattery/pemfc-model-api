@@ -65,6 +65,38 @@ def predict():
         if model_type not in models or models[model_type] is None:
             return jsonify({"error": f"{model_type} 모델이 로드되지 않았습니다."}), 500
 
+        # ✅ 입력 스케일링
+        if model_type == "PWU":
+            x_scaler = joblib.load("/scaler/x_pwu_scaler.pkl")
+            input_array = np.array(data)  # shape: [600, 9]
+
+            # 🔹 iA_diff 제외한 인덱스 (0: iA, 1: iA_diff, 2~8: 나머지)
+            inverse_indices = [0, 2, 3, 4, 5, 6, 7, 8]
+            to_scale = input_array[:, inverse_indices]  # shape: [600, 8]
+
+            # 🔹 스케일링
+            scaled_part = x_scaler.transform(to_scale)  # shape: [600, 8]
+
+            # 🔹 iA_diff는 그대로 사용
+            iA_diff = input_array[:, 1].reshape(-1, 1)  # shape: [600, 1]
+
+            # 🔹 다시 붙이기: [iA, iA_diff, 나머지]
+            scaled_input = np.concatenate([
+                scaled_part[:, [0]],  # iA
+                iA_diff,  # iA_diff (스케일링 안 함)
+                scaled_part[:, 1:]  # 나머지
+            ], axis=1)  # 최종 shape: [600, 9]
+
+            input_tensor = torch.FloatTensor(scaled_input).unsqueeze(0).to(device)
+
+        elif model_type == "T3":
+            x_scaler = joblib.load("/scaler/x_t3_scaler.pkl")
+            input_array = np.array(data)
+            scaled_input = x_scaler.transform(input_array)
+            input_tensor = torch.FloatTensor(scaled_input).unsqueeze(0).to(device)
+        else:
+            return jsonify({"error": f"{model_type}에 대한 입력 스케일러가 없습니다."}), 500
+
         model = models[model_type]
         input_tensor = torch.FloatTensor(data).unsqueeze(0).to(device)  # shape: [1, 600, feature_dim]
 

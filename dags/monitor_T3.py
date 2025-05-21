@@ -20,9 +20,10 @@ def monitor_model(**kwargs):
         "threshold": threshold
     })
 
+    # if res.status_code != 200:
+    #     raise Exception("Flask prediction failed.")
     if res.status_code != 200:
-        raise Exception("Flask prediction failed.")
-
+        raise Exception(f"Flask prediction failed.\nStatus: {res.status_code}\nMessage: {res.text}")
     prediction = res.json()["prediction"]
     error = abs(prediction - y_true[0])
     print(f"[monitor_T3] Prediction: {prediction}, Ground Truth: {y_true[0]}, Error: {error}")

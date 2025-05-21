@@ -23,3 +23,20 @@ if response.status_code == 200:
 else:
     print(f"[❌ ERROR] status code: {response.status_code}")
     print(response.text)
+
+# import requests
+# import json
+# import numpy as np
+#
+# # 예시 데이터: (600, 4)짜리 입력 생성
+# fake_data = np.random.rand(600, 4).tolist()
+#
+# payload = {
+#     "input": fake_data,
+#     "type": "T3",
+#     "threshold": 0.02
+# }
+#
+# res = requests.post("http://localhost:5000/predict", json=payload)
+# print("[✅ RESPONSE]", res.status_code)
+# print(res.json())

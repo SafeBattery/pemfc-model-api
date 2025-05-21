@@ -1,0 +1,38 @@
+[2025-05-21T14:00:00.579+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-21T14:00:00.606+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: monitor_PWU.monitor_model scheduled__2025-05-21T13:00:00+00:00 [queued]>
+[2025-05-21T14:00:00.613+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: monitor_PWU.monitor_model scheduled__2025-05-21T13:00:00+00:00 [queued]>
+[2025-05-21T14:00:00.614+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2025-05-21T14:00:00.635+0000] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): monitor_model> on 2025-05-21 13:00:00+00:00
+[2025-05-21T14:00:00.642+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'monitor_PWU', 'monitor_model', 'scheduled__2025-05-21T13:00:00+00:00', '--job-id', '36', '--raw', '--subdir', 'DAGS_FOLDER/monitor_PWU.py', '--cfg-path', '/tmp/tmpbobalw11']
+[2025-05-21T14:00:00.645+0000] {standard_task_runner.py:91} INFO - Job 36: Subtask monitor_model
+[2025-05-21T14:00:00.646+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=304) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-05-21T14:00:00.647+0000] {standard_task_runner.py:63} INFO - Started process 307 to run task
+[2025-05-21T14:00:00.692+0000] {task_command.py:426} INFO - Running <TaskInstance: monitor_PWU.monitor_model scheduled__2025-05-21T13:00:00+00:00 [running]> on host 3e2b91e6624b
+[2025-05-21T14:00:00.786+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='monitor_PWU' AIRFLOW_CTX_TASK_ID='monitor_model' AIRFLOW_CTX_EXECUTION_DATE='2025-05-21T13:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-21T13:00:00+00:00'
+[2025-05-21T14:00:00.786+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-21T14:00:11.642+0000] {logging_mixin.py:188} INFO - Prediction: 0.5438764691352844, Ground Truth: 0.7, Error: 0.15612353086471553
+[2025-05-21T14:00:11.660+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-21T14:00:11.661+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-21T14:00:11.673+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=monitor_PWU, task_id=monitor_model, execution_date=20250521T130000, start_date=20250521T140000, end_date=20250521T140011
+[2025-05-21T14:00:11.722+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-21T14:00:11.748+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-21T14:00:11.753+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-05-21T14:04:25.977+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-21T14:04:26.009+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: monitor_PWU.monitor_model scheduled__2025-05-21T13:00:00+00:00 [queued]>
+[2025-05-21T14:04:26.017+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: monitor_PWU.monitor_model scheduled__2025-05-21T13:00:00+00:00 [queued]>
+[2025-05-21T14:04:26.018+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2025-05-21T14:04:26.035+0000] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): monitor_model> on 2025-05-21 13:00:00+00:00
+[2025-05-21T14:04:26.041+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'monitor_PWU', 'monitor_model', 'scheduled__2025-05-21T13:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/monitor_PWU.py', '--cfg-path', '/tmp/tmpm_6a9vbc']
+[2025-05-21T14:04:26.043+0000] {standard_task_runner.py:91} INFO - Job 2: Subtask monitor_model
+[2025-05-21T14:04:26.047+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=204) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-05-21T14:04:26.048+0000] {standard_task_runner.py:63} INFO - Started process 205 to run task
+[2025-05-21T14:04:26.090+0000] {task_command.py:426} INFO - Running <TaskInstance: monitor_PWU.monitor_model scheduled__2025-05-21T13:00:00+00:00 [running]> on host 4c17401f2ea2
+[2025-05-21T14:04:26.174+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='monitor_PWU' AIRFLOW_CTX_TASK_ID='monitor_model' AIRFLOW_CTX_EXECUTION_DATE='2025-05-21T13:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-21T13:00:00+00:00'
+[2025-05-21T14:04:26.176+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-21T14:04:48.583+0000] {logging_mixin.py:188} INFO - Prediction: 0.4744332432746887, Ground Truth: 0.7, Error: 0.22556675672531123
+[2025-05-21T14:04:48.627+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-05-21T14:04:48.631+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-21T14:04:48.654+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=monitor_PWU, task_id=monitor_model, execution_date=20250521T130000, start_date=20250521T140426, end_date=20250521T140448
+[2025-05-21T14:04:48.753+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-21T14:04:48.823+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-21T14:04:48.839+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

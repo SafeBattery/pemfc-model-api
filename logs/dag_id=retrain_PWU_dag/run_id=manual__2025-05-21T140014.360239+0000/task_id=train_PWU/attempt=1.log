@@ -1,0 +1,23 @@
+[2025-05-21T14:00:15.289+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-21T14:00:15.316+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: retrain_PWU_dag.train_PWU manual__2025-05-21T14:00:14.360239+00:00 [queued]>
+[2025-05-21T14:00:15.324+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: retrain_PWU_dag.train_PWU manual__2025-05-21T14:00:14.360239+00:00 [queued]>
+[2025-05-21T14:00:15.324+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2025-05-21T14:00:15.341+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): train_PWU> on 2025-05-21 14:00:14.360239+00:00
+[2025-05-21T14:00:15.348+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'retrain_PWU_dag', 'train_PWU', 'manual__2025-05-21T14:00:14.360239+00:00', '--job-id', '42', '--raw', '--subdir', 'DAGS_FOLDER/retrain_PWU_dag.py', '--cfg-path', '/tmp/tmpsr4vm2in']
+[2025-05-21T14:00:15.350+0000] {standard_task_runner.py:91} INFO - Job 42: Subtask train_PWU
+[2025-05-21T14:00:15.356+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=336) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-05-21T14:00:15.357+0000] {standard_task_runner.py:63} INFO - Started process 337 to run task
+[2025-05-21T14:00:15.405+0000] {task_command.py:426} INFO - Running <TaskInstance: retrain_PWU_dag.train_PWU manual__2025-05-21T14:00:14.360239+00:00 [running]> on host 3e2b91e6624b
+[2025-05-21T14:00:15.554+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='retrain_PWU_dag' AIRFLOW_CTX_TASK_ID='train_PWU' AIRFLOW_CTX_EXECUTION_DATE='2025-05-21T14:00:14.360239+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-21T14:00:14.360239+00:00'
+[2025-05-21T14:00:15.555+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-21T14:00:15.568+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-05-21T14:00:15.569+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/scripts/train_PWU.py']
+[2025-05-21T14:00:15.577+0000] {subprocess.py:86} INFO - Output:
+[2025-05-21T14:01:16.168+0000] {subprocess.py:93} INFO - [Epoch 1] Loss: 0.0117
+[2025-05-21T14:01:16.168+0000] {subprocess.py:93} INFO - [✅ Saved] Trained model → /models/PWU/model.pth
+[2025-05-21T14:01:16.835+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-05-21T14:01:16.836+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-21T14:01:16.863+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=retrain_PWU_dag, task_id=train_PWU, execution_date=20250521T140014, start_date=20250521T140015, end_date=20250521T140116
+[2025-05-21T14:01:16.887+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-05-21T14:01:16.903+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-05-21T14:01:16.912+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

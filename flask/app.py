@@ -1,5 +1,10 @@
 from flask import Flask, request, jsonify
 import torch
+import numpy as np
+import joblib
+
+pwu_scaler = joblib.load("/scaler/y_pwu_scaler.pkl")
+t3_scaler = joblib.load("/scaler/y_t3_scaler.pkl")
 
 app = Flask(__name__)
 models = {
@@ -48,10 +53,14 @@ def reload_model():
 @app.route('/predict', methods=['POST'])
 def predict():
     try:
-        data = request.json['input']         # 입력 데이터: [600, feature_dim]
+        print("[DEBUG 1] 요청 수신됨")
+        data = request.json['input']  # 입력 데이터: [600, feature_dim]
         model_type = request.json.get('type', 'PWU')
         threshold = request.json.get('threshold', 0.02)
         target_index = request.json.get('target_index', None)
+
+        print(f"[DEBUG 2] model_type: {model_type}")
+        print(f"[DEBUG 3] data shape: {np.array(data).shape}")
 
         if model_type not in models or models[model_type] is None:
             return jsonify({"error": f"{model_type} 모델이 로드되지 않았습니다."}), 500
@@ -61,20 +70,47 @@ def predict():
 
         # ✅ 예측
         with torch.no_grad():
-            pred = model(input_tensor).squeeze().cpu().tolist()
+            output = model(input_tensor).squeeze().cpu()
+            if isinstance(output, torch.Tensor) and output.dim() == 0:
+                pred = output.item()
+            else:
+                pred = output.tolist()
+
+        print(f"[DEBUG 4] pred: {pred} ({type(pred)})")
+
+        # ✅ 역변환 함수 정의
+        def inverse_scale(pred, model_type):
+            if model_type == "PWU":
+                arr = np.array(pred).reshape(1, -1)  # shape: (1, 2)
+                return pwu_scaler.inverse_transform(arr).flatten().tolist()
+            elif model_type == "T3":
+                if isinstance(pred, torch.Tensor):
+                    val = pred.item() if pred.dim() == 0 else float(pred[0])
+                elif isinstance(pred, (float, int)):
+                    val = float(pred)
+                elif isinstance(pred, list):
+                    val = float(pred[0])
+                else:
+                    raise ValueError("지원되지 않는 pred 형식입니다.")
+                arr = np.array([[val]])
+                return t3_scaler.inverse_transform(arr).flatten().tolist()
+            else:
+                return pred  # 역변환 스케일러 없는 경우
+
+        # ✅ 역변환 적용
+        original_pred = inverse_scale(pred, model_type)
 
         result = {
             "prediction": pred,
+            "original_prediction": original_pred,
             "threshold": threshold
         }
 
-        # ✅ 조건 충족 시 explain 실행 (custom 범위로 설정)
+        # ✅ 조건 충족 시 explain 실행
         trigger_explain = False
-        violated_index = None  # ✅ 범위 벗어난 인덱스 추적용
+        violated_index = None
 
         if model_type == "PWU" and isinstance(pred, list) and len(pred) >= 2:
-            # pred[0]: U_totV (0.628 ~ 0.941)
-            # pred[1]: PW     (0.221 ~ 0.698)
             if not (0.628 <= pred[0] <= 0.941):
                 trigger_explain = True
                 violated_index = 0
@@ -82,26 +118,45 @@ def predict():
                 trigger_explain = True
                 violated_index = 1
 
-        elif model_type == "T3" and isinstance(pred, (float, int, list)):
-            pred_val = pred if isinstance(pred, (float, int)) else pred[0]
+        elif model_type == "T3":
+            # pred_val을 무조건 float으로 변환
+            if isinstance(pred, torch.Tensor):
+                pred_val = pred.item() if pred.dim() == 0 else float(pred[0])
+            elif isinstance(pred, (float, int)):
+                pred_val = float(pred)
+            elif isinstance(pred, list):
+                pred_val = float(pred[0])
+            else:
+                raise ValueError("지원되지 않는 pred 형식입니다.")
+
+            print(f"[DEBUG 5] pred_val: {pred_val}")
             if not (0.336 <= pred_val <= 0.983):
                 trigger_explain = True
                 violated_index = 0
 
+        # ✅ Explain 호출
         if trigger_explain:
+            print(f"[DEBUG 6] Explain triggered. violated_index: {violated_index}")
             input_seq = torch.FloatTensor(np.array(data))  # [600, feature_dim]
-            target_tensor = torch.FloatTensor(np.array(pred))
+
+            # pred 값을 안전하게 tensor로 변환
+            if isinstance(pred, (float, int)):
+                target_tensor = torch.tensor([pred]).float()
+            elif isinstance(pred, list):
+                target_tensor = torch.tensor(pred).float()
+            elif isinstance(pred, torch.Tensor):
+                target_tensor = pred.float().unsqueeze(0) if pred.dim() == 0 else pred.float()
+            else:
+                raise ValueError("지원되지 않는 pred 형식입니다.")
+
             mask = explain(model, input_seq, target_tensor, violated_index)
             result["mask"] = mask.tolist()
-            result["explained_target_index"] = violated_index  # 추가 정보 반환
+            result["explained_target_index"] = violated_index
 
         return jsonify(result)
 
-
     except Exception as e:
-
-        print(f"[Flask ERROR] 예측 중 오류 발생: {str(e)}")  # 로그 출력 추가
-
+        print(f"[Flask ERROR] 예측 중 오류 발생: {str(e)}")
         return jsonify({"error": str(e)}), 500
 
 

@@ -65,6 +65,7 @@ services:
       - ./models:/models
       - ./Model:/models/Model
       - ./data:/opt/airflow/data
+      - ./scaler:/opt/airflow/data/scaler
     command: webserver
     deploy:
       resources:
@@ -93,6 +94,7 @@ services:
       - ./models:/models
       - ./Model:/models/Model
       - ./data:/opt/airflow/data
+      - ./scaler:/opt/airflow/data/scaler
     command: scheduler
     deploy:
       resources:
@@ -113,6 +115,7 @@ services:
       - ./flask:/app
       - ./models:/models
       - ./Model:/models/Model
+      - ./scaler:/scaler
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
 

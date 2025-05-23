@@ -2655,3 +2655,38 @@
 [2025-05-21T18:56:41.182+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:56:41.181+0000] {dag.py:3096} INFO - Sync 1 DAGs
 [2025-05-21T18:56:41.216+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:56:41.215+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_PWU to 2025-05-21 18:00:00+00:00, run_after=2025-05-21 19:00:00+00:00
 [2025-05-21T18:56:41.255+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_PWU.py took 0.145 seconds
+[2025-05-21T18:57:11.638+0000] {processor.py:161} INFO - Started process (PID=653) to work on /opt/airflow/dags/monitor_PWU.py
+[2025-05-21T18:57:11.638+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_PWU.py for tasks to queue
+[2025-05-21T18:57:11.640+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:57:11.640+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_PWU.py
+[2025-05-21T18:57:11.663+0000] {processor.py:840} INFO - DAG(s) 'monitor_PWU' retrieved from /opt/airflow/dags/monitor_PWU.py
+[2025-05-21T18:57:11.700+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:57:11.700+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-05-21T18:57:11.730+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:57:11.730+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_PWU to 2025-05-21 18:00:00+00:00, run_after=2025-05-21 19:00:00+00:00
+[2025-05-21T18:57:11.758+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_PWU.py took 0.127 seconds
+[2025-05-21T18:57:42.058+0000] {processor.py:161} INFO - Started process (PID=673) to work on /opt/airflow/dags/monitor_PWU.py
+[2025-05-21T18:57:42.061+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_PWU.py for tasks to queue
+[2025-05-21T18:57:42.064+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:57:42.063+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_PWU.py
+[2025-05-21T18:57:42.092+0000] {processor.py:840} INFO - DAG(s) 'monitor_PWU' retrieved from /opt/airflow/dags/monitor_PWU.py
+[2025-05-21T18:57:42.136+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:57:42.136+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-05-21T18:57:42.184+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:57:42.183+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_PWU to 2025-05-21 18:00:00+00:00, run_after=2025-05-21 19:00:00+00:00
+[2025-05-21T18:57:42.229+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_PWU.py took 0.183 seconds
+[2025-05-21T18:58:12.397+0000] {processor.py:161} INFO - Started process (PID=693) to work on /opt/airflow/dags/monitor_PWU.py
+[2025-05-21T18:58:12.398+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_PWU.py for tasks to queue
+[2025-05-21T18:58:12.400+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:58:12.399+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_PWU.py
+[2025-05-21T18:58:12.422+0000] {processor.py:840} INFO - DAG(s) 'monitor_PWU' retrieved from /opt/airflow/dags/monitor_PWU.py
+[2025-05-21T18:58:12.446+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:58:12.445+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-05-21T18:58:12.479+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:58:12.479+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_PWU to 2025-05-21 18:00:00+00:00, run_after=2025-05-21 19:00:00+00:00
+[2025-05-21T18:58:12.509+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_PWU.py took 0.120 seconds
+[2025-05-21T18:58:42.808+0000] {processor.py:161} INFO - Started process (PID=713) to work on /opt/airflow/dags/monitor_PWU.py
+[2025-05-21T18:58:42.809+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_PWU.py for tasks to queue
+[2025-05-21T18:58:42.811+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:58:42.811+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_PWU.py
+[2025-05-21T18:58:42.835+0000] {processor.py:840} INFO - DAG(s) 'monitor_PWU' retrieved from /opt/airflow/dags/monitor_PWU.py
+[2025-05-21T18:58:42.856+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:58:42.856+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-05-21T18:58:42.878+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:58:42.878+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_PWU to 2025-05-21 18:00:00+00:00, run_after=2025-05-21 19:00:00+00:00
+[2025-05-21T18:58:42.901+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_PWU.py took 0.100 seconds
+[2025-05-21T18:59:13.231+0000] {processor.py:161} INFO - Started process (PID=733) to work on /opt/airflow/dags/monitor_PWU.py
+[2025-05-21T18:59:13.232+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/monitor_PWU.py for tasks to queue
+[2025-05-21T18:59:13.235+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:59:13.234+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/monitor_PWU.py
+[2025-05-21T18:59:13.257+0000] {processor.py:840} INFO - DAG(s) 'monitor_PWU' retrieved from /opt/airflow/dags/monitor_PWU.py
+[2025-05-21T18:59:13.280+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:59:13.280+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-05-21T18:59:13.304+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:59:13.304+0000] {dag.py:3954} INFO - Setting next_dagrun for monitor_PWU to 2025-05-21 18:00:00+00:00, run_after=2025-05-21 19:00:00+00:00
+[2025-05-21T18:59:13.327+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/monitor_PWU.py took 0.101 seconds

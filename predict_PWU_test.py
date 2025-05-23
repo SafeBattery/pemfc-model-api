@@ -1,42 +1,49 @@
-import requests
+import pandas as pd
 import numpy as np
+import requests
 import json
 
-# ✅ 테스트용 T3 입력 생성: shape (600, 4)
-X_test = np.tile(np.linspace(0.2, 0.8, 9), (600, 1)).tolist()
+# ✅ CSV 경로 설정
+csv_path = r"C:\Users\kk\PycharmProjects\cap_airflow\data\data.csv"
 
+input_columns = ['iA', 'iA_diff','P_H2_supply', 'P_H2_inlet', 'P_Air_supply',
+           'P_Air_inlet', 'm_Air_write', 'm_H2_write', 'T_Stack_inlet']
+
+# ✅ 읽어올 행 범위 지정
+start_row = 28300
+window_size = 600
+
+# ✅ 데이터 로딩 및 입력 구성
+df = pd.read_csv(csv_path)
+input_data = df[input_columns].iloc[start_row:start_row + window_size].to_numpy().tolist()
+
+# ✅ Flask에 요청 보낼 payload
 payload = {
     "type": "PWU",
     "threshold": 0.05,
-    "input": X_test
+    "input": input_data
 }
 
-# ✅ Flask 서버에 요청 (로컬에서 실행 중이면 localhost:5000, Docker 환경이면 flask-api:5000)
-url = "http://localhost:5000/predict"  # or "http://flask-api:5000/predict" inside Docker
+# ✅ 요청 전 디버깅 출력
+print(f"[INFO] Sending data with shape: {np.array(input_data).shape}")
 
+# ✅ 요청 보내기
+url = "http://localhost:5000/predict"
 response = requests.post(url, json=payload)
 
+# ✅ 예측 결과 출력 이후에 정답 출력
 if response.status_code == 200:
     result = response.json()
     print("[✅ SUCCESS] 응답 결과:")
     print(json.dumps(result, indent=2))
+
+    # ✅ 정답값 출력: start_row + 100 위치의 PW, U_totV
+    target_row = start_row + 700
+    pw = df.loc[target_row, 'PW']
+    u_totv = df.loc[target_row, 'U_totV']
+
+    print(f"[🎯 정답] {target_row}번째 row - U_totV: {u_totv:.4f}, PW: {pw:.4f}")
 else:
     print(f"[❌ ERROR] status code: {response.status_code}")
     print(response.text)
 
-# import requests
-# import json
-# import numpy as np
-#
-# # 예시 데이터: (600, 4)짜리 입력 생성
-# fake_data = np.random.rand(600, 4).tolist()
-#
-# payload = {
-#     "input": fake_data,
-#     "type": "T3",
-#     "threshold": 0.02
-# }
-#
-# res = requests.post("http://localhost:5000/predict", json=payload)
-# print("[✅ RESPONSE]", res.status_code)
-# print(res.json())

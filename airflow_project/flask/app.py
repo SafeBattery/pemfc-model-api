@@ -25,7 +25,7 @@ def reload_model():
         # 🔁 모델 클래스 분기 import
         if model_type == "PWU":
             from Model.PWU import Informer
-            model = Informer(input_size=9, output_size=2)
+            model = Informer(input_size=9, output_size=2, d_model=64, n_heads=8, e_layers=3)
         elif model_type == "T3":
             from Model.T3 import Informer
             model = Informer(input_size=4, output_size=1)
@@ -91,7 +91,7 @@ def predict_and_explain():
 import os
 if os.path.exists("/models/PWU/model.pth"):
     from Model.PWU import Informer
-    model = Informer(input_size=9, output_size=2)
+    model = Informer(input_size=9, output_size=2, d_model=64, n_heads=8, e_layers=3)
     model.load_state_dict(torch.load("/models/PWU/model.pth", map_location='cpu'))
     model.eval()
     models["PWU"] = model

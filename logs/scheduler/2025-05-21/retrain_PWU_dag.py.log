@@ -2648,3 +2648,38 @@
 [2025-05-21T18:56:42.337+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:56:42.337+0000] {dag.py:3096} INFO - Sync 1 DAGs
 [2025-05-21T18:56:42.351+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:56:42.351+0000] {dag.py:3954} INFO - Setting next_dagrun for retrain_PWU_dag to None, run_after=None
 [2025-05-21T18:56:42.374+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retrain_PWU_dag.py took 0.084 seconds
+[2025-05-21T18:57:12.811+0000] {processor.py:161} INFO - Started process (PID=663) to work on /opt/airflow/dags/retrain_PWU_dag.py
+[2025-05-21T18:57:12.812+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retrain_PWU_dag.py for tasks to queue
+[2025-05-21T18:57:12.815+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:57:12.814+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_PWU_dag.py
+[2025-05-21T18:57:12.835+0000] {processor.py:840} INFO - DAG(s) 'retrain_PWU_dag' retrieved from /opt/airflow/dags/retrain_PWU_dag.py
+[2025-05-21T18:57:12.859+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:57:12.858+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-05-21T18:57:12.877+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:57:12.876+0000] {dag.py:3954} INFO - Setting next_dagrun for retrain_PWU_dag to None, run_after=None
+[2025-05-21T18:57:12.903+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retrain_PWU_dag.py took 0.099 seconds
+[2025-05-21T18:57:43.157+0000] {processor.py:161} INFO - Started process (PID=683) to work on /opt/airflow/dags/retrain_PWU_dag.py
+[2025-05-21T18:57:43.159+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retrain_PWU_dag.py for tasks to queue
+[2025-05-21T18:57:43.162+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:57:43.161+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_PWU_dag.py
+[2025-05-21T18:57:43.181+0000] {processor.py:840} INFO - DAG(s) 'retrain_PWU_dag' retrieved from /opt/airflow/dags/retrain_PWU_dag.py
+[2025-05-21T18:57:43.205+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:57:43.205+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-05-21T18:57:43.219+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:57:43.218+0000] {dag.py:3954} INFO - Setting next_dagrun for retrain_PWU_dag to None, run_after=None
+[2025-05-21T18:57:43.248+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retrain_PWU_dag.py took 0.099 seconds
+[2025-05-21T18:58:13.564+0000] {processor.py:161} INFO - Started process (PID=703) to work on /opt/airflow/dags/retrain_PWU_dag.py
+[2025-05-21T18:58:13.565+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retrain_PWU_dag.py for tasks to queue
+[2025-05-21T18:58:13.567+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:58:13.566+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_PWU_dag.py
+[2025-05-21T18:58:13.585+0000] {processor.py:840} INFO - DAG(s) 'retrain_PWU_dag' retrieved from /opt/airflow/dags/retrain_PWU_dag.py
+[2025-05-21T18:58:13.603+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:58:13.603+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-05-21T18:58:13.616+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:58:13.615+0000] {dag.py:3954} INFO - Setting next_dagrun for retrain_PWU_dag to None, run_after=None
+[2025-05-21T18:58:13.641+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retrain_PWU_dag.py took 0.086 seconds
+[2025-05-21T18:58:43.876+0000] {processor.py:161} INFO - Started process (PID=723) to work on /opt/airflow/dags/retrain_PWU_dag.py
+[2025-05-21T18:58:43.877+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retrain_PWU_dag.py for tasks to queue
+[2025-05-21T18:58:43.879+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:58:43.879+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_PWU_dag.py
+[2025-05-21T18:58:43.902+0000] {processor.py:840} INFO - DAG(s) 'retrain_PWU_dag' retrieved from /opt/airflow/dags/retrain_PWU_dag.py
+[2025-05-21T18:58:43.927+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:58:43.927+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-05-21T18:58:43.945+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:58:43.945+0000] {dag.py:3954} INFO - Setting next_dagrun for retrain_PWU_dag to None, run_after=None
+[2025-05-21T18:58:43.973+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retrain_PWU_dag.py took 0.106 seconds
+[2025-05-21T18:59:14.376+0000] {processor.py:161} INFO - Started process (PID=743) to work on /opt/airflow/dags/retrain_PWU_dag.py
+[2025-05-21T18:59:14.377+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/retrain_PWU_dag.py for tasks to queue
+[2025-05-21T18:59:14.379+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:59:14.379+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/retrain_PWU_dag.py
+[2025-05-21T18:59:14.397+0000] {processor.py:840} INFO - DAG(s) 'retrain_PWU_dag' retrieved from /opt/airflow/dags/retrain_PWU_dag.py
+[2025-05-21T18:59:14.420+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:59:14.419+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-05-21T18:59:14.434+0000] {logging_mixin.py:188} INFO - [2025-05-21T18:59:14.433+0000] {dag.py:3954} INFO - Setting next_dagrun for retrain_PWU_dag to None, run_after=None
+[2025-05-21T18:59:14.457+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/retrain_PWU_dag.py took 0.087 seconds

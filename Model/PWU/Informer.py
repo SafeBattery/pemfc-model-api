@@ -34,7 +34,7 @@ class EncoderLayer(nn.Module):
 
 # ✅ T3 (Simplified)
 class Informer(nn.Module):
-    def __init__(self, input_size, d_model=128, n_heads=4, e_layers=2, output_size=2):
+    def __init__(self, input_size, d_model=64, n_heads=8, e_layers=3, output_size=2):
         super().__init__()
         self.input_proj = nn.Linear(input_size, d_model)
 

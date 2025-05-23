@@ -34,7 +34,7 @@ def reload_model():
         # 🔁 모델 클래스 분기 import
         if model_type == "PWU":
             from Model.PWU import Informer
-            model = Informer(input_size=9, output_size=2)
+            model = Informer(input_size=9, output_size=2, d_model=64, n_heads=8, e_layers=3)
         elif model_type == "T3":
             from Model.T3 import Informer
             model = Informer(input_size=4, output_size=1)
@@ -53,14 +53,10 @@ def reload_model():
 @app.route('/predict', methods=['POST'])
 def predict():
     try:
-        print("[DEBUG 1] 요청 수신됨")
         data = request.json['input']  # 입력 데이터: [600, feature_dim]
         model_type = request.json.get('type', 'PWU')
         threshold = request.json.get('threshold', 0.02)
         target_index = request.json.get('target_index', None)
-
-        print(f"[DEBUG 2] model_type: {model_type}")
-        print(f"[DEBUG 3] data shape: {np.array(data).shape}")
 
         if model_type not in models or models[model_type] is None:
             return jsonify({"error": f"{model_type} 모델이 로드되지 않았습니다."}), 500
@@ -98,7 +94,7 @@ def predict():
             return jsonify({"error": f"{model_type}에 대한 입력 스케일러가 없습니다."}), 500
 
         model = models[model_type]
-        input_tensor = torch.FloatTensor(data).unsqueeze(0).to(device)  # shape: [1, 600, feature_dim]
+        # input_tensor = torch.FloatTensor(data).unsqueeze(0).to(device)  # shape: [1, 600, feature_dim]
 
         # ✅ 예측
         with torch.no_grad():
@@ -108,13 +104,12 @@ def predict():
             else:
                 pred = output.tolist()
 
-        print(f"[DEBUG 4] pred: {pred} ({type(pred)})")
-
         # ✅ 역변환 함수 정의
         def inverse_scale(pred, model_type):
             if model_type == "PWU":
                 arr = np.array(pred).reshape(1, -1)  # shape: (1, 2)
                 return pwu_scaler.inverse_transform(arr).flatten().tolist()
+
             elif model_type == "T3":
                 if isinstance(pred, torch.Tensor):
                     val = pred.item() if pred.dim() == 0 else float(pred[0])
@@ -126,6 +121,7 @@ def predict():
                     raise ValueError("지원되지 않는 pred 형식입니다.")
                 arr = np.array([[val]])
                 return t3_scaler.inverse_transform(arr).flatten().tolist()
+
             else:
                 return pred  # 역변환 스케일러 없는 경우
 
@@ -223,7 +219,7 @@ def predict_and_explain():
 import os
 if os.path.exists("/models/PWU/model.pth"):
     from Model.PWU import Informer
-    model = Informer(input_size=9, output_size=2)
+    model = Informer(input_size=9, output_size=2, d_model=64, n_heads=8, e_layers=3)
     model.load_state_dict(torch.load("/models/PWU/model.pth", map_location='cpu'))
     model.eval()
     models["PWU"] = model

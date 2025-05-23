@@ -17,11 +17,15 @@ def explain(model, input_seq, target_tensor, target_index=None):
     pert = FadeMovingAverageWindow(device, window_size=600)
     mask = Mask(perturbation=pert, device=device, task="regression", verbose=False, deletion_mode=True)
 
-    # ✅ 예측 함수 정의
     def f_target(x):
         model.train()
         out = model(x.unsqueeze(0)).squeeze()
-        return out if target_index is None else out[target_index]
+        if out.dim() == 0 or target_index is None:
+            return out
+        elif out.dim() == 1 and target_index < out.size(0):
+            return out[target_index]
+        else:
+            raise ValueError("예상치 못한 출력 형태 또는 인덱스 초과입니다.")
 
     # ✅ 타겟값 정의
     if target_index is None:
